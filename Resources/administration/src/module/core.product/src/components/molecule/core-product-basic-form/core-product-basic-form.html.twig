@@ -1,0 +1,20 @@
+<sw-card title="Produkt Informationen" description="Allgemeine Informationen zum Produkt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. A dolor praesentium repellat sequi tempora. Facilis minima, quibusdam. Assumenda atque commodi dicta, eum excepturi nostrum optio quis quos reiciendis vel voluptatem.">
+
+    <sw-field label="Titel" id="title" type="text" name="name" placeholder="Your product title..." v-model="product.name"></sw-field>
+
+    <sw-field label="Artikel-Beschreibung" id="descriptionLong" type="textarea" name="descriptionLong" placeholder="Your product description..." v-model="product.descriptionLong"></sw-field>
+
+    <div class="split--container">
+        <div class="container--item">
+            <sw-field label="Artikelnummer" id="uuid" type="text" name="uuid" placeholder="Your product Uuid" :value="product.mainDetailUuid"></sw-field>
+        </div>
+        <div class="container--item">
+            <sw-field label="Hersteller" id="manufacturer" type="select" name="manufacturer" placeholder="Your product manufacturer" v-model="product.manufacturerUuid">
+                <option v-for="manufacturer in manufacturers" :value="manufacturer.uuid">{{ manufacturer.name }}</option>
+            </sw-field>
+        </div>
+    </div>
+
+    <sw-multi-select label="Kategorie" id="category" placeholder="Your product categories..." :serviceProvider="serviceProvider" v-model="product.categories"></sw-multi-select>
+    <sw-loader v-if="isWorking"></sw-loader>
+</sw-card>
