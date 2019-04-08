@@ -1,13 +1,13 @@
 {
-  "sw-configuration": {
+  "sw-property": {
     "general": {
       "placeholderSearchBar": "Durchsuche alle Eigenschaften",
       "mainMenuItemGeneral": "Eigenschaften",
       "descriptionTextModule": "Verwaltung von Eigenschaften."
     },
     "list": {
-      "textConfigurations": "Eigenschaften",
-      "buttonAddConfiguration": "Hinzufügen",
+      "textProperties": "Eigenschaften",
+      "buttonAddProperty": "Hinzufügen",
       "columnName": "Eigenschaft",
       "columnOptions":"Eigenschaft Optionen",
       "contextMenuView": "Bearbeiten",
