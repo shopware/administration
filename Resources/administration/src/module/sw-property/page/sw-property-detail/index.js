@@ -1,7 +1,7 @@
 import { Component, State, Mixin } from 'src/core/shopware';
-import template from './sw-configuration-detail.html.twig';
+import template from './sw-property-detail.html.twig';
 
-Component.register('sw-configuration-detail', {
+Component.register('sw-property-detail', {
     template,
 
     mixins: [
@@ -17,7 +17,7 @@ Component.register('sw-configuration-detail', {
 
     computed: {
         groupStore() {
-            return State.getStore('configuration_group');
+            return State.getStore('property_group');
         }
     },
 
@@ -32,8 +32,8 @@ Component.register('sw-configuration-detail', {
         },
 
         onSave() {
-            const titleSaveSuccess = this.$tc('sw-configuration.detail.titleSaveSuccess');
-            const messageSaveSuccess = this.$tc('sw-configuration.detail.messageSaveSuccess', 0, { name: this.group.name });
+            const titleSaveSuccess = this.$tc('sw-property.detail.titleSaveSuccess');
+            const messageSaveSuccess = this.$tc('sw-property.detail.messageSaveSuccess', 0, { name: this.group.name });
 
             return this.group.save().then(() => {
                 this.createNotificationSuccess({

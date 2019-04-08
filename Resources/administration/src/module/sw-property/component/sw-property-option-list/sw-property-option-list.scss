@@ -1,6 +1,6 @@
 @import "~scss/variables";
 
-.sw-configuration-option-list {
+.sw-property-option-list {
     height: 865px;
 
     .sw-empty-state {
@@ -15,12 +15,12 @@
         padding: 0;
     }
 
-    .sw-configuration-option-list__toolbar {
+    .sw-property-option-list__toolbar {
         padding: 25px 35px;
         background-color: $color-light-gray;
         border-bottom: 1px solid $color-steam-cloud;
 
-        .sw-configuration-option-list__delete-button {
+        .sw-property-option-list__delete-button {
             border-color: $color-crimson;
 
             .sw-icon {

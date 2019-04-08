@@ -1,8 +1,8 @@
 import { Component, Mixin } from 'src/core/shopware';
-import template from './sw-configuration-option-list.html.twig';
-import './sw-configuration-option-list.scss';
+import template from './sw-property-option-list.html.twig';
+import './sw-property-option-list.scss';
 
-Component.register('sw-configuration-option-list', {
+Component.register('sw-property-option-list', {
     template,
 
     mixins: [
@@ -40,19 +40,19 @@ Component.register('sw-configuration-option-list', {
         setSorting() {
             if (this.group.sortingType === 'alphanumeric') {
                 this.sortings = [{
-                    field: 'configuration_group_option.name',
+                    field: 'property_group_option.name',
                     order: 'ASC',
                     naturalSorting: false
                 }];
             } else if (this.group.sortingType === 'numeric') {
                 this.sortings = [{
-                    field: 'configuration_group_option.name',
+                    field: 'property_group_option.name',
                     order: 'ASC',
                     naturalSorting: true
                 }];
             } else if (this.group.sortingType === 'position') {
                 this.sortings = [{
-                    field: 'configuration_group_option.position',
+                    field: 'property_group_option.position',
                     order: 'ASC',
                     naturalSorting: false
                 }];
