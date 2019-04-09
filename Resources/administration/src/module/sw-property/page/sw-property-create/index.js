@@ -1,10 +1,10 @@
 import { Component } from 'src/core/shopware';
 import utils from 'src/core/service/util.service';
 
-Component.extend('sw-configuration-create', 'sw-configuration-detail', {
+Component.extend('sw-property-create', 'sw-property-detail', {
 
     beforeRouteEnter(to, from, next) {
-        if (to.name.includes('sw.configuration.create') && !to.params.id) {
+        if (to.name.includes('sw.property.create') && !to.params.id) {
             to.params.id = utils.createId();
         }
 
@@ -21,7 +21,7 @@ Component.extend('sw-configuration-create', 'sw-configuration-detail', {
 
         onSave() {
             this.$super.onSave().then(() => {
-                this.$router.push({ name: 'sw.configuration.detail', params: { id: this.groupId } });
+                this.$router.push({ name: 'sw.property.detail', params: { id: this.groupId } });
             });
         }
     }

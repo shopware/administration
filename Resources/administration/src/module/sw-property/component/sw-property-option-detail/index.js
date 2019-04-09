@@ -1,7 +1,7 @@
 import { Component } from 'src/core/shopware';
-import template from './sw-configuration-option-detail.html.twig';
+import template from './sw-property-option-detail.html.twig';
 
-Component.register('sw-configuration-option-detail', {
+Component.register('sw-property-option-detail', {
     template,
 
     props: {
