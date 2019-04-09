@@ -1,7 +1,7 @@
 import { Component, State, Mixin } from 'src/core/shopware';
-import template from './sw-configuration-list.html.twig';
+import template from './sw-property-list.html.twig';
 
-Component.register('sw-configuration-list', {
+Component.register('sw-property-list', {
     template,
 
     mixins: [
@@ -10,15 +10,15 @@ Component.register('sw-configuration-list', {
 
     data() {
         return {
-            configurations: [],
+            properties: [],
             isLoading: false,
             showDeleteModal: false
         };
     },
 
     computed: {
-        configurationStore() {
-            return State.getStore('configuration_group');
+        propertiesStore() {
+            return State.getStore('property_group');
         }
     },
 
@@ -34,7 +34,7 @@ Component.register('sw-configuration-list', {
         onConfirmDelete(id) {
             this.showDeleteModal = false;
 
-            return this.configurationStore.getById(id).delete(true).then(() => {
+            return this.propertiesStore.getById(id).delete(true).then(() => {
                 this.getList();
             });
         },
@@ -43,7 +43,7 @@ Component.register('sw-configuration-list', {
             this.isLoading = true;
             const params = this.getListingParams();
 
-            this.configurations = [];
+            this.properties = [];
 
             params.associations = {
                 options: {
@@ -52,12 +52,12 @@ Component.register('sw-configuration-list', {
                 }
             };
 
-            return this.configurationStore.getList(params, true).then((response) => {
+            return this.propertiesStore.getList(params, true).then((response) => {
                 this.total = response.total;
-                this.configurations = response.items;
+                this.properties = response.items;
                 this.isLoading = false;
 
-                return this.configurations;
+                return this.properties;
             });
         }
     }

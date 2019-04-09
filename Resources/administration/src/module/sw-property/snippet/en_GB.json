@@ -1,13 +1,13 @@
 {
-  "sw-configuration": {
+  "sw-property": {
     "general": {
       "placeholderSearchBar": "Search properties",
       "mainMenuItemGeneral": "Properties",
       "descriptionTextModule": "Manage properties here."
     },
     "list": {
-      "textConfigurations": "Properties",
-      "buttonAddConfiguration": "Add",
+      "textProperties": "Properties",
+      "buttonAddProperty": "Add",
       "columnName": "Property",
       "columnOptions": "Property options",
       "contextMenuView": "Edit",
