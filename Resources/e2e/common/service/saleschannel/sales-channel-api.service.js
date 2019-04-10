@@ -1,6 +1,6 @@
 const ApiService = require('../api.service');
 
-export default class StorefrontApiService extends ApiService {
+export default class SalesChannelApiService extends ApiService {
     loginByUserName(username = 'admin', password = 'shopware') {
         return this.client.post('/oauth/token', {
             grant_type: 'password',
@@ -17,7 +17,7 @@ export default class StorefrontApiService extends ApiService {
     }
 
     getBasicPath(path) {
-        return `${path}/storefront-api`;
+        return `${path}/sales-channel-api`;
     }
 
     /**

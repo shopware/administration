@@ -1,13 +1,13 @@
 const AdminApiService = require('./../administration/admin-api.service');
-const StorefrontApiService = require('./storefront-api.service');
+const SalesChannelApiService = require('./sales-channel-api.service');
 const _ = require('lodash');
 const glob = require('glob');
 const path = require('path');
 const uuid = require('uuid/v4');
 
-export default class StorefrontFixtureService {
+export default class SalesChannelFixtureService {
     constructor() {
-        this.apiClient = new StorefrontApiService(process.env.APP_URL);
+        this.apiClient = new SalesChannelApiService(process.env.APP_URL);
         this.adminApiClient = new AdminApiService(process.env.APP_URL);
         this.basicFixture = '';
 
