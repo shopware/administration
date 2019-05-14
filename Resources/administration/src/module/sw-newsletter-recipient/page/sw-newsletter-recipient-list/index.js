@@ -2,10 +2,10 @@ import { Component, Mixin, State } from 'src/core/shopware';
 import LocalStore from 'src/core/data/LocalStore';
 import EntityCollection from 'src/core/data-new/entity-collection.data';
 import Criteria from 'src/core/data-new/criteria.data';
-import template from './sw-newsletter-receiver-list.twig';
-import './sw-newsletter-receiver-list.scss';
+import template from './sw-newsletter-recipient-list.html.twig';
+import './sw-newsletter-recipient-list.scss';
 
-Component.register('sw-newsletter-receiver-list', {
+Component.register('sw-newsletter-recipient-list', {
     template,
 
     inject: [
@@ -91,7 +91,7 @@ Component.register('sw-newsletter-receiver-list', {
                 criteria.addFilter(item);
             });
 
-            this.repository = this.repositoryFactory.create('newsletter_receiver');
+            this.repository = this.repositoryFactory.create('newsletter_recipient');
             this.repository.search(criteria, this.context).then((searchResult) => {
                 this.items = searchResult;
                 this.total = searchResult.total;
@@ -164,49 +164,49 @@ Component.register('sw-newsletter-receiver-list', {
             return [{
                 property: 'email',
                 dataIndex: 'email',
-                label: this.$tc('sw-newsletter-receiver.list.email'),
-                routerLink: 'sw.newsletter.receiver.detail',
+                label: this.$tc('sw-newsletter-recipient.list.email'),
+                routerLink: 'sw.newsletter.recipient.detail',
                 allowResize: true,
                 inlineEdit: 'string'
             }, {
                 property: 'firstName',
                 dataIndex: 'firstName,lastName',
                 inlineEdit: 'string',
-                label: this.$tc('sw-newsletter-receiver.list.name'),
+                label: this.$tc('sw-newsletter-recipient.list.name'),
                 allowResize: true,
                 primary: true
             }, {
                 property: 'status',
                 dataIndex: 'status',
-                label: this.$tc('sw-newsletter-receiver.list.status'),
+                label: this.$tc('sw-newsletter-recipient.list.status'),
                 allowResize: true
             }, {
                 property: 'zipCode',
                 dataIndex: 'zipCode',
-                label: this.$tc('sw-newsletter-receiver.list.zipCode'),
+                label: this.$tc('sw-newsletter-recipient.list.zipCode'),
                 allowResize: true,
                 align: 'right'
             }, {
                 property: 'city',
                 dataIndex: 'city',
-                label: this.$tc('sw-newsletter-receiver.list.city'),
+                label: this.$tc('sw-newsletter-recipient.list.city'),
                 allowResize: true
             }, {
                 property: 'street',
                 dataIndex: 'street',
-                label: this.$tc('sw-newsletter-receiver.list.street'),
+                label: this.$tc('sw-newsletter-recipient.list.street'),
                 allowResize: true,
                 visible: false
             }, {
                 property: 'updatedAt',
                 dataIndex: 'updatedAt',
-                label: this.$tc('sw-newsletter-receiver.list.updatedAt'),
+                label: this.$tc('sw-newsletter-recipient.list.updatedAt'),
                 allowResize: true,
                 visible: false
             }, {
                 property: 'createdAt',
                 dataIndex: 'createdAt',
-                label: this.$tc('sw-newsletter-receiver.list.createdAt'),
+                label: this.$tc('sw-newsletter-recipient.list.createdAt'),
                 allowResize: true,
                 visible: false
             }];
