@@ -1,8 +1,8 @@
 import { Component } from 'src/core/shopware';
-import template from './sw-settings-snippet-boolean-filer-item.html.twig';
-import './sw-settings-snippet-boolean-filter-item.scss';
+import template from './sw-settings-snippet-filter-switch.html.twig';
+import './sw-settings-snippet-filter-switch.scss';
 
-Component.register('sw-settings-snippet-boolean-filter-item', {
+Component.register('sw-settings-snippet-filter-switch', {
     template,
 
     props: {
@@ -50,8 +50,8 @@ Component.register('sw-settings-snippet-boolean-filter-item', {
     computed: {
         fieldClasses() {
             return [
-                'sw-settings-snippet-boolean-filter-item__field',
-                `sw-settings-snippet-boolean-filter-item--${this.type}`,
+                'sw-settings-snippet-filter-switch__field',
+                `sw-settings-snippet-filter-switch--${this.type}`,
                 {
                     'border-top': this.borderTop,
                     'border-bottom': this.borderBottom

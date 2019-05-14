@@ -1,7 +1,7 @@
 import { Component } from 'src/core/shopware';
-import template from './sw-newsletter-receiver-boolean-filer.html.twig';
+import template from './sw-newsletter-recipient-filter-switch.html.twig';
 
-Component.register('sw-newsletter-receiver-boolean-filter', {
+Component.register('sw-newsletter-recipient-filter-switch', {
     template,
 
     props: {

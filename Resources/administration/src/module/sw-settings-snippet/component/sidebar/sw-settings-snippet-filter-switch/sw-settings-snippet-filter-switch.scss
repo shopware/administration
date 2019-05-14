@@ -2,8 +2,8 @@
 
 $sw-settings-snippets-sidebar-border:       $color-steam-cloud;
 
-.sw-settings-snippet-boolean-filter-item {
-  .sw-settings-snippet-boolean-filter-item__field {
+.sw-settings-snippet-filter-switch {
+  .sw-settings-snippet-filter-switch__field {
     padding-left: 20px;
 
     &.border-top {
@@ -14,11 +14,11 @@ $sw-settings-snippets-sidebar-border:       $color-steam-cloud;
       border-bottom: 1px solid $sw-settings-snippets-sidebar-border;
     }
 
-    &.sw-settings-snippet-boolean-filter-item--small {
-      padding-top: 0px;
+    &.sw-settings-snippet-filter-switch--small {
+      padding-top: 0;
     }
 
-    &.sw-settings-snippet-boolean-filter-item--large {
+    &.sw-settings-snippet-filter-switch--large {
       padding-top: 30px;
     }
   }
