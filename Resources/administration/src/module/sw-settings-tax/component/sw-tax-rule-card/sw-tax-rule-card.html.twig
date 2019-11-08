@@ -1,26 +1,24 @@
-{% block sw_tax_area_rule_card %}
-    <sw-card :title="$tc('sw-settings-tax.taxAreaRuleCard.cardTitle')"
-             :class="taxAreaRuleCardStyles"
-             :isLoading="isLoading || taxAreaRulesLoading || cardLoading">
-
+{% block sw_tax_rule_card %}
+    <sw-card :title="$tc('sw-settings-tax.taxRuleCard.cardTitle')"
+             class="sw-tax-rule-card"
+             :class="taxRuleCardClasses"
+             :isLoading="isLoading || taxRulesLoading || cardLoading">
         <template #grid>
-            <template v-if="!taxAreaRulesEmpty && !disabled">
-                {% block sw_tax_area_rule_card_header %}
+            <template v-if="!taxRulesEmpty && !disabled">
+                {% block sw_tax_rule_card_header %}
                     <sw-card-section divider="bottom" secondary slim>
-
-                        {% block sw_tax_area_rule_card_header_filter %}
-                            <sw-card-filter :placeholder="$tc('sw-settings-tax.taxAreaRuleCard.searchBarPlaceholder')"
+                        {% block sw_tax_rule_card_header_filter %}
+                            <sw-card-filter :placeholder="$tc('sw-settings-tax.taxRuleCard.searchBarPlaceholder')"
                                             @sw-card-filter-term-change="onSearchTermChange">
-
                                 <template #filter>
-                                    {% block sw_tax_area_rule_card_header_create_document_button %}
+                                    {% block sw_tax_rule_card_header_create_rule_button %}
                                         <sw-button slot="button"
                                                    size="small"
-                                                   class="sw-tax-area-rule-grid-button"
+                                                   class="sw-tax-rule-grid-button"
                                                    @click="showModal = true">
 
-                                            {% block sw_tax_area_rule_card_header_create_document_button_label %}
-                                                {{ $tc('sw-settings-tax.taxAreaRuleCard.labelCreateNew') }}
+                                            {% block sw_tax_rule_card_header_create_document_button_label %}
+                                                {{ $tc('sw-settings-tax.taxRuleCard.labelCreateNew') }}
                                             {% endblock %}
 
                                         </sw-button>
@@ -32,8 +30,8 @@
                     </sw-card-section>
                 {% endblock %}
 
-                {% block sw_tax_area_rule_card_grid %}
-                    <sw-data-grid :dataSource="taxAreaRules"
+                {% block sw_tax_rule_card_grid %}
+                    <sw-data-grid :dataSource="taxRules"
                                   :columns="getColumns"
                                   :fullPage="false"
                                   :showSettings="true"
@@ -42,8 +40,8 @@
                                   :isLoading="isLoading"
                                   :allowColumnEdit="false"
                                   :allowInlineEdit="false"
-                                  identifier="sw-tax-area-rule-grid">
-                        {% block sw_settings_tax_area_rule_grid_column_tax_rate %}
+                                  identifier="sw-tax-rule-grid">
+                        {% block sw_settings_tax_rule_grid_column_tax_rate %}
                             <template #column-taxRate="{ item, isInlineEdit }">
                                 <template v-if="isInlineEdit">
                                     <sw-number-field :size="compact ? 'small' : 'default'" v-model="item.taxRate">
@@ -60,14 +58,14 @@
                             </template>
                         {% endblock %}
 
-                        {% block sw_settings_tax_area_rule_grid_column_tax_area_rule_type_type_name %}
-                            <template #column-taxAreaRuleType.typeName="{ item }">
+                        {% block sw_settings_tax_rule_grid_column_tax_rule_type_type_name %}
+                            <template #column-type.typeName="{ item }">
                                 <component v-if="getTypeCellComponent(item)"
                                            :is="getTypeCellComponent(item)"
-                                           :taxAreaRule="item">
+                                           :taxRule="item">
                                 </component>
                                 <template v-else>
-                                    {{ item.taxAreaRuleType.typeName }}
+                                    {{ item.type.typeName }}
                                 </template>
                             </template>
                         {% endblock %}
@@ -75,7 +73,7 @@
                         {% block sw_settings_tax_list_grid_columns_actions %}
                             <template #actions="{ item }">
                                 {% block sw_settings_tax_list_grid_columns_actions_edit %}
-                                    <sw-context-menu-item class="sw-tax-list__edit-action" @click="showAreaRuleModal(item)">
+                                    <sw-context-menu-item class="sw-tax-list__edit-action" @click="showRuleModal(item)">
                                         {{ $tc('sw-settings-tax.list.contextMenuEdit') }}
                                     </sw-context-menu-item>
                                 {% endblock %}
@@ -93,11 +91,11 @@
                                 {% block sw_settings_tax_list_delete_modal %}
                                     <sw-modal v-if="showDeleteModal === item.id"
                                               @modal-close="onCloseDeleteModal"
-                                              :title="$tc('sw-settings-tax.taxAreaRuleCard.modalTitleDelete')"
+                                              :title="$tc('sw-settings-tax.taxRuleCard.modalTitleDelete')"
                                               variant="small">
                                         {% block sw_settings_tax_list_delete_modal_confirm_delete_text %}
                                             <p class="sw-settings-tax-list__confirm-delete-text">
-                                                {{ $tc('sw-settings-tax.taxAreaRuleCard.textDeleteConfirm', 0, { name: item.country.name, type: item.taxAreaRuleType.typeName }) }}
+                                                {{ $tc('sw-settings-tax.taxRuleCard.textDeleteConfirm', 0, { name: item.country.name, type: item.type.typeName }) }}
                                             </p>
                                         {% endblock %}
 
@@ -125,31 +123,31 @@
             </template>
         </template>
 
-        {% block sw_tax_area_rule_card_grid_column_modal %}
-            <sw-settings-tax-area-rule-modal v-if="showModal"
-                                             :tax="tax"
-                                             :currentAreaRule="currentAreaRule"
-                                             @modal-close="onModalClose">
-            </sw-settings-tax-area-rule-modal>
+        {% block sw_tax_rule_card_grid_column_modal %}
+            <sw-settings-tax-rule-modal v-if="showModal"
+                                        :tax="tax"
+                                        :currentRule="currentRule"
+                                        @modal-close="onModalClose">
+            </sw-settings-tax-rule-modal>
         {% endblock %}
 
-        {% block sw_tax_area_rule_card_empty_state %}
-            <template v-if="taxAreaRulesEmpty || disabled">
-                <div class="sw-settings-tax-area-rule-card__empty-state">
-                    {% block sw_tax_area_rule_card_empty_state_image %}
+        {% block sw_tax_rule_card_empty_state %}
+            <template v-if="taxRulesEmpty || disabled">
+                <div class="sw-settings-tax-rule-card__empty-state">
+                    {% block sw_tax_rule_card_empty_state_image %}
                         <img :src="'administration/static/img/empty-states/settings-empty-state.svg' | asset">
                     {% endblock %}
 
-                    {% block sw_tax_area_rule_card_empty_state_label %}
-                        <div class="sw-settings-tax-area-rule-card__empty-state--label">
-                            <p v-if="disabled">{{ $tc('sw-settings-tax.taxAreaRuleCard.createStateDescription') }}</p>
-                            <p v-else>{{ $tc('sw-settings-tax.taxAreaRuleCard.emptyStateDescription') }}</p>
+                    {% block sw_tax_rule_card_empty_state_label %}
+                        <div class="sw-settings-tax-rule-card__empty-state--label">
+                            <p v-if="disabled">{{ $tc('sw-settings-tax.taxRuleCard.createStateDescription') }}</p>
+                            <p v-else>{{ $tc('sw-settings-tax.taxRuleCard.emptyStateDescription') }}</p>
                         </div>
                     {% endblock %}
 
-                    {% block sw_tax_area_rule_card_empty_state_button %}
+                    {% block sw_tax_rule_card_empty_state_button %}
                         <sw-button variant="ghost" size="small" @click="showModal = true" :disabled="disabled">
-                            {{ $tc('sw-settings-tax.taxAreaRuleCard.labelCreateNew') }}
+                            {{ $tc('sw-settings-tax.taxRuleCard.labelCreateNew') }}
                         </sw-button>
                     {% endblock %}
                 </div>

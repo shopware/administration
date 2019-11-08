@@ -1,13 +1,12 @@
-import template
-    from './sw-settings-tax-area-rule-type-zip-code-range.html.twig';
+import template from './sw-settings-tax-rule-type-zip-code-range-cell.html.twig';
 
 const { Component } = Shopware;
 
-Component.register('sw-settings-tax-area-rule-type-zip-code-range', {
+Component.register('sw-settings-tax-rule-type-zip-code-range-cell', {
     template,
 
     props: {
-        taxAreaRule: {
+        taxRule: {
             type: Object,
             required: true
         }
@@ -19,8 +18,8 @@ Component.register('sw-settings-tax-area-rule-type-zip-code-range', {
 
     methods: {
         createdComponent() {
-            if (!this.taxAreaRule.data) {
-                this.taxAreaRule.data = {
+            if (!this.taxRule.data) {
+                this.taxRule.data = {
                     fromZipCode: '',
                     toZipCode: ''
                 };
