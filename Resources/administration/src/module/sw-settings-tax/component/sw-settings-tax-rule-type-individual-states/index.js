@@ -1,15 +1,15 @@
-import template from './sw-settings-tax-area-rule-type-individual-states.html.twig';
+import template from './sw-settings-tax-rule-type-individual-states.html.twig';
 
 const { Component } = Shopware;
 const { Criteria, EntityCollection } = Shopware.Data;
 
-Component.register('sw-settings-tax-area-rule-type-individual-states', {
+Component.register('sw-settings-tax-rule-type-individual-states', {
     template,
 
     inject: ['repositoryFactory', 'apiContext'],
 
     props: {
-        taxAreaRule: {
+        taxRule: {
             type: Object,
             required: true
         }
@@ -18,7 +18,7 @@ Component.register('sw-settings-tax-area-rule-type-individual-states', {
     computed: {
         exclusionCriteria() {
             const criteria = new Criteria();
-            criteria.addFilter(Criteria.equals('countryId', this.taxAreaRule.countryId));
+            criteria.addFilter(Criteria.equals('countryId', this.taxRule.countryId));
 
             return criteria;
         },
@@ -39,11 +39,11 @@ Component.register('sw-settings-tax-area-rule-type-individual-states', {
 
     methods: {
         createdComponent() {
-            if (!this.taxAreaRule.data
-                || !this.taxAreaRule.data.states
-                || !this.taxAreaRule.data.states.length
+            if (!this.taxRule.data
+                || !this.taxRule.data.states
+                || !this.taxRule.data.states.length
             ) {
-                this.taxAreaRule.data = { states: [] };
+                this.taxRule.data = { states: [] };
                 this.individualStates = new EntityCollection(
                     this.stateRepository.route,
                     this.stateRepository.entityName,
@@ -51,7 +51,7 @@ Component.register('sw-settings-tax-area-rule-type-individual-states', {
                 );
             } else {
                 const criteria = new Criteria();
-                criteria.addFilter(Criteria.equalsAny('id', this.taxAreaRule.data.states));
+                criteria.setIds(this.taxRule.data.states);
 
                 this.stateRepository.search(criteria, this.apiContext).then(collection => {
                     this.individualStates = collection;
@@ -60,7 +60,7 @@ Component.register('sw-settings-tax-area-rule-type-individual-states', {
         },
 
         onChange(collection) {
-            this.taxAreaRule.data.states = collection.getIds();
+            this.taxRule.data.states = collection.getIds();
         }
     }
 });
