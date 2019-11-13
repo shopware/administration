@@ -43,6 +43,10 @@ module.exports = {
         '<rootDir>/test/@tool/setup-env-for-shopware.js'
     ],
 
+    modulePathIgnorePatterns: [
+        '<rootDir>/test/e2e/'
+    ],
+
     testMatch: [
         '<rootDir>/test/**/*.spec.js'
     ]

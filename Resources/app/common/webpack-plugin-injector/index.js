@@ -304,11 +304,18 @@ class WebpackPluginInjector {
     injectCopyPluginConfig(plugins) {
         plugins.forEach((plugin) => {
             const pluginName = plugin.technicalName;
-            const publicFolder = this.section === 'administration' ? 'public' : 'dist';
             const basePath = plugin.basePath;
-            const pluginPath = `${basePath}Resources/${publicFolder}/${this.section}`;
-            const publicStaticPath = `${basePath}Resources/${publicFolder}/static/`;
             const assetPaths = plugin.assetPaths;
+            let pluginPath = '';
+            let publicStaticPath = '';
+
+            if (this.section === 'administration') {
+                pluginPath = `${basePath}Resources/public/administration`;
+                publicStaticPath = `${basePath}Resources/public/static/`;
+            } else {
+                pluginPath = `${basePath}Resources/app/storefront/dist/storefront`;
+                publicStaticPath = `${basePath}Resources/app/storefront/dist/static/`;
+            }
 
             // Copy plugin chunk after build
             if (!this.webpackConfig.plugins) {
