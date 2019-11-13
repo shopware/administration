@@ -3,7 +3,7 @@ const fs = require('fs');
 const dircompare = require('dir-compare');
 const exec = util.promisify(require('child_process').exec);
 
-const rootPath = `${__dirname}/../../../../../../../`;
+const rootPath = `${__dirname}/../../../../../../../../`;
 const readdir = util.promisify(fs.readdir);
 
 describe('webpack/bundle', () => {

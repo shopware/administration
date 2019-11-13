@@ -2,14 +2,14 @@
 const path = require('path');
 const process = require('process');
 
-const appPath = process.argv.slice(2)[0];
+let appPath = process.argv.slice(2)[0];
 const appEnv = process.env.APP_ENV;
 
 module.exports = {
     build: {
         env: require('./prod.env'), // eslint-disable-line
         index: path.resolve(__dirname, '../src/app/index.html'),
-        assetsRoot: path.resolve(__dirname, '../../public/'),
+        assetsRoot: path.resolve(__dirname, '../../../public/'),
         assetsSubDirectory: 'static',
         assetsPublicPath: `${appPath}/bundles/administration/`,
         productionSourceMap: true,

@@ -18,7 +18,6 @@ rm(path.join(config.build.assetsRoot, config.build.assetsSubDirectory), (removeD
     }
 
     webpack(webpackConfig, (webpackError, stats) => {
-
         if (webpackError) {
             console.error(webpackError.stack || err);
             if (webpackError.details) {
