@@ -1,9 +1,8 @@
-import { Application } from 'src/core/shopware';
 import './component';
 import './config';
 import './preview';
 
-Application.getContainer('service').cmsService.registerCmsElement({
+Shopware.Service('cmsService').registerCmsElement({
     name: 'form',
     label: 'Form',
     component: 'sw-cms-el-form',
@@ -16,11 +15,19 @@ Application.getContainer('service').cmsService.registerCmsElement({
         },
         title: {
             source: 'static',
-            value: 'Form'
+            value: ''
+        },
+        mailReceiver: {
+            source: 'static',
+            value: []
+        },
+        defaultMailReceiver: {
+            source: 'static',
+            value: true
         },
         confirmationText: {
             source: 'static',
-            value: 'This is the default confirmation text.'
+            value: ''
         }
     }
 });
