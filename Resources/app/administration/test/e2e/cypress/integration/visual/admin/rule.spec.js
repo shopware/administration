@@ -2,7 +2,7 @@
 
 import RulePageObject from '../../../support/pages/module/sw-rule.page-object';
 
-describe('Rule builder: Test crud operations', () => {
+describe('Rule builder: Visual tests', () => {
     beforeEach(() => {
         cy.setToInitialState()
             .then(() => {
@@ -16,7 +16,7 @@ describe('Rule builder: Test crud operations', () => {
             });
     });
 
-    it('@rule: edit rule conditions', () => {
+    it('@visual: check appearance of basic rule workflow', () => {
         const page = new RulePageObject();
 
         cy.get('.sw-search-bar__input').typeAndCheckSearchField('Ruler');
@@ -116,33 +116,7 @@ describe('Rule builder: Test crud operations', () => {
             cy.get('.sw-condition .sw-condition__context-button').first().click();
         });
 
-        cy.get('.sw-context-menu').contains('Delete').click();
-
-        cy.get('.sw-condition').should('have.length', 5);
-        cy.get('@second-and-container')
-            .children()
-            .should('have.length', 2)
-            .first()
-            .should('have.class', 'sw-condition-or-container');
-
-        cy.get('@second-and-container').within(() => {
-            cy.get('.sw-condition-and-container__actions button.sw-button')
-                .contains('Delete container')
-                .click();
-        });
-        cy.get('@second-and-container').should('not.exist');
-
-        cy.get('.sw-condition-tree button').contains('Delete all').click();
-
-        cy.get('.sw-condition-or-container').should('have.length', 1);
-        cy.get('.sw-condition-and-container').should('have.length', 1);
-        cy.get('.sw-condition').should('have.length', 1);
-
-        cy.get('button.sw-button').contains('Save').click();
-
-        cy.awaitAndCheckNotification('An error occurred while saving rule "Ruler".');
-        cy.get('.sw-condition .sw-condition__container').should('have.class', 'has--error');
-        cy.get('.sw-condition')
-            .contains('You must choose a type for this rule.').should('be.visible');
+        // Take snapshot for visual testing
+        cy.takeSnapshot('Rule builder -  Rule with conditions', '.sw-condition');
     });
 });
