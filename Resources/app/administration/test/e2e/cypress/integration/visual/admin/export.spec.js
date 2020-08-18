@@ -1,6 +1,6 @@
 import SettingsPageObject from '../../../support/pages/module/sw-settings.page-object';
 
-describe('Import/Export - Export:', () => {
+describe('Import/Export - Export:  Visual tests', () => {
     let page = null;
 
     beforeEach(() => {
@@ -22,7 +22,7 @@ describe('Import/Export - Export:', () => {
         page = null;
     });
 
-    it('@base @settings: Create export with product profile', () => {
+    it('@visual: check appearance of basic export workflow', () => {
         cy.server();
         cy.route({
             url: `${Cypress.env('apiPath')}/_action/import-export/prepare`,
@@ -38,6 +38,9 @@ describe('Import/Export - Export:', () => {
             url: `${Cypress.env('apiPath')}/search/import-export-log`,
             method: 'post'
         }).as('importExportLog');
+
+        // Take snapshot for visual testing
+        cy.takeSnapshot('Import export - Export overview', '.sw-import-export-view-export');
 
         // Select fixture profile for product entity
         cy.get('.sw-import-export-exporter__profile-select')
@@ -59,13 +62,6 @@ describe('Import/Export - Export:', () => {
             expect(xhr).to.have.property('status', 200);
         });
 
-        // Progress bar and log should be visible
-        cy.get('.sw-import-export-progress__progress-bar-bar').should('be.visible');
-        cy.get('.sw-import-export-progress__stats').should('be.visible');
-
-        // The download button should be there
-        cy.get('.sw-import-export-progress__download-action').should('be.visible');
-
         // The activity logs should contain an entry for the succeeded export
         cy.get(`.sw-import-export-activity ${page.elements.dataGridRow}--0`).should('be.visible');
         cy.get(`.sw-import-export-activity ${page.elements.dataGridRow}--0 .sw-data-grid__cell--profileName`)
@@ -74,5 +70,8 @@ describe('Import/Export - Export:', () => {
             .should('contain', 'Succeeded');
 
         cy.awaitAndCheckNotification('The export was completed successfully.');
+
+        // Take snapshot for visual testing
+        cy.takeSnapshot('Import export -  Overview after export', '.sw-import-export-activity');
     });
 });

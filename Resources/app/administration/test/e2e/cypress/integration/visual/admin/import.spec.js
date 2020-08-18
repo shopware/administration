@@ -1,6 +1,6 @@
 import SettingsPageObject from '../../../support/pages/module/sw-settings.page-object';
 
-describe('Import/Export - Export:', () => {
+describe('Import/Export - Import:  Visual tests', { browser: "!firefox" }, () => {
     let page = null;
 
     beforeEach(() => {
@@ -9,11 +9,8 @@ describe('Import/Export - Export:', () => {
         }).then(() => {
             return cy.createDefaultFixture('import-export-profile');
         }).then(() => {
-            return cy.createProductFixture();
-        })
-            .then(() => {
-                cy.openInitialPage(`${Cypress.env('admin')}#/sw/import-export/index/export`);
-            });
+            cy.openInitialPage(`${Cypress.env('admin')}#/sw/import-export/index/import`);
+        });
 
         page = new SettingsPageObject();
     });
@@ -22,27 +19,53 @@ describe('Import/Export - Export:', () => {
         page = null;
     });
 
-    it('@base @settings: Create export with product profile', () => {
+    it('@visual: check appearance of basic import workflow', () => {
         cy.server();
         cy.route({
-            url: `${Cypress.env('apiPath')}/_action/import-export/prepare`,
+            url: '/api/v*/_action/import-export/prepare',
             method: 'post'
         }).as('prepare');
 
         cy.route({
-            url: `${Cypress.env('apiPath')}/_action/import-export/process`,
+            url: '/api/v*/_action/import-export/process',
             method: 'post'
         }).as('process');
 
         cy.route({
-            url: `${Cypress.env('apiPath')}/search/import-export-log`,
+            url: '/api/v*/search/import-export-log',
             method: 'post'
         }).as('importExportLog');
 
+        // Take snapshot for visual testing
+        cy.takeSnapshot('Import export -  Import overview', '.sw-import-export-view-import');
+
+        // Upload a fixture CSV file with a single product
+        cy.fixture('csv/single-product.csv').then(fileContent => {
+            cy.get('.sw-file-input__file-input').upload(
+                {
+                    fileContent,
+                    fileName: 'single-product.csv',
+                    mimeType: 'text/csv'
+                }, {
+                    subjectType: 'input'
+                }
+            );
+        });
+
+        // File upload component should display file name
+        cy.get('.sw-file-input__file-headline').should('contain', 'single-product.csv');
+
+        // Start button should be disabled in the first place
+        cy.get('.sw-import-export-progress__start-process-action').should('be.disabled');
+
         // Select fixture profile for product entity
-        cy.get('.sw-import-export-exporter__profile-select')
-            .typeSingleSelectAndCheck('E2E', '.sw-import-export-exporter__profile-select');
+        cy.get('.sw-import-export-importer__profile-select')
+            .typeSingleSelectAndCheck('E2E', '.sw-import-export-importer__profile-select');
+
+        // Start the import progress
+        cy.get('.sw-import-export-progress__start-process-action').should('not.be.disabled');
         cy.get('.sw-import-export-progress__start-process-action').click();
+        cy.get('.sw-import-export-progress__start-process-action').should('be.disabled');
 
         // Prepare request should be successful
         cy.wait('@prepare').then((xhr) => {
@@ -63,16 +86,14 @@ describe('Import/Export - Export:', () => {
         cy.get('.sw-import-export-progress__progress-bar-bar').should('be.visible');
         cy.get('.sw-import-export-progress__stats').should('be.visible');
 
-        // The download button should be there
-        cy.get('.sw-import-export-progress__download-action').should('be.visible');
-
-        // The activity logs should contain an entry for the succeeded export
+        // The activity logs should contain an entry for the succeeded import
         cy.get(`.sw-import-export-activity ${page.elements.dataGridRow}--0`).should('be.visible');
         cy.get(`.sw-import-export-activity ${page.elements.dataGridRow}--0 .sw-data-grid__cell--profileName`)
             .should('contain', 'E2E');
         cy.get(`.sw-import-export-activity ${page.elements.dataGridRow}--0 .sw-data-grid__cell--state`)
             .should('contain', 'Succeeded');
 
-        cy.awaitAndCheckNotification('The export was completed successfully.');
+        // Take snapshot for visual testing
+        cy.takeSnapshot('Import export -  Overview after import', '.sw-import-export-activity');
     });
 });

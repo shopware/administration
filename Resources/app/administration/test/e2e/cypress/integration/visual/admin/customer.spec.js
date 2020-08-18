@@ -7,7 +7,7 @@ let customer = {
     country: 'Germany'
 };
 
-describe('Customer: Test crud operations', () => {
+describe('Customer:  Visual test', () => {
     beforeEach(() => {
         cy.setToInitialState()
             .then(() => {
@@ -32,7 +32,7 @@ describe('Customer: Test crud operations', () => {
             });
     });
 
-    it('@base @customer: create customer', () => {
+    it('@visual: check appearance of basic customer workflow', () => {
         const page = new CustomerPageObject();
         // Request we want to wait for later
         cy.server();
@@ -41,8 +41,14 @@ describe('Customer: Test crud operations', () => {
             method: 'post'
         }).as('saveData');
 
+        // Take snapshot for visual testing
+        cy.takeSnapshot('Customer listing', '.sw-customer-list-grid');
+
         // Fill in basic data
         cy.get('a[href="#/sw/customer/create"]').click();
+
+        // Take snapshot for visual testing
+        cy.takeSnapshot('Customer create', '.sw-customer-create');
 
         cy.get('.sw-customer-base-form__salutation-select')
             .typeSingleSelectAndCheck('Mr.', '.sw-customer-base-form__salutation-select');
@@ -72,6 +78,9 @@ describe('Customer: Test crud operations', () => {
             // cy.awaitAndCheckNotification('');
         });
 
+        // Take snapshot for visual testing
+        cy.takeSnapshot('Customer create', '.sw-customer-detail');
+
         cy.get(`${page.elements.customerMetaData}-customer-name`)
             .contains(`${customer.firstName} ${customer.lastName}`);
         cy.get('.sw-customer-card-email-link').contains('tester@example.com');
@@ -92,15 +101,8 @@ describe('Customer: Test crud operations', () => {
         cy.contains('tester@example.com');
     });
 
-    it('@base @customer: edit customers\' base data', () => {
+    it('@visual: check appearance of customer address workflow', () => {
         const page = new CustomerPageObject();
-
-        // Request we want to wait for later
-        cy.server();
-        cy.route({
-            url: `${Cypress.env('apiPath')}/customer/*`,
-            method: 'patch'
-        }).as('saveData');
 
         // Open customer
         cy.clickContextMenuItem(
@@ -108,48 +110,25 @@ describe('Customer: Test crud operations', () => {
             page.elements.contextMenuButton,
             `${page.elements.dataGridRow}--0`
         );
+        cy.get(`${page.elements.customerMetaData}-customer-name`)
+            .contains(`Mr. ${customer.firstName} ${customer.lastName}`);
 
-        // Open and swap default in addresses
+        // Open and add new address
+        cy.get('.sw-customer-detail__tab-addresses').click();
+
+        // Take snapshot for visual testing
+        cy.takeSnapshot('Customer detail - address listing', '.sw-customer-detail-addresses');
+
         cy.get('.sw-customer-detail__open-edit-mode-action').click();
-        cy.get('#sw-field--customer-firstName').clear().type('Ronald');
-        cy.get('#sw-field--customer-lastName').clear().type('Weasley');
-        cy.get(page.elements.customerSaveAction).click();
+        cy.get('.sw-customer-detail-addresses__add-address-action').click();
+
+        // Take snapshot for visual testing
+        cy.takeSnapshot('Customer detail - address modal', '.sw-modal');
+
+        page.createBasicAddress(newAddress);
+        cy.get(`${page.elements.modal} ${page.elements.primaryButton}`).click();
 
         // Verify updated customer
-        cy.wait('@saveData').then((xhr) => {
-            expect(xhr).to.have.property('status', 204);
-        });
-        cy.get(page.elements.smartBarBack).click();
-        cy.get('.sw-data-grid__cell--firstName').contains('Ronald Weasley');
-    });
-
-    it('@customer: delete customer', () => {
-        const page = new CustomerPageObject();
-
-        // Request we want to wait for later
-        cy.server();
-        cy.route({
-            url: `${Cypress.env('apiPath')}/customer/*`,
-            method: 'delete'
-        }).as('deleteData');
-
-        cy.clickContextMenuItem(
-            '.sw-context-menu-item--danger',
-            page.elements.contextMenuButton,
-            `${page.elements.dataGridRow}--0`
-        );
-        cy.get(`${page.elements.modal} .sw-customer-list__confirm-delete-text`).contains(
-            'Are you sure you want to delete the customer "Pep Eroni"?'
-        );
-        cy.get(`${page.elements.modal}__footer ${page.elements.dangerButton}`).click();
-
-        // Verify updated customer
-        cy.wait('@deleteData').then((xhr) => {
-            expect(xhr).to.have.property('status', 204);
-        });
-        cy.get(page.elements.emptyState).should('be.visible');
-        cy.get(page.elements.smartBarAmount).contains('(0)');
-        cy.get('input.sw-search-bar__input').typeAndCheckSearchField('Pep Eroni');
-        cy.get(page.elements.smartBarAmount).contains('(0)');
+        cy.contains(`Mr. ${customer.firstName} ${customer.lastName}`);
     });
 });
