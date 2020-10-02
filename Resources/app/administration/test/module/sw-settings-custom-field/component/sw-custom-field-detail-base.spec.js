@@ -12,7 +12,7 @@ const set = {
     _isNew: false
 };
 
-function createWrapper() {
+function createWrapper(privileges = []) {
     return shallowMount(Shopware.Component.build('sw-custom-field-set-detail-base'), {
         propsData: {
             set: set
@@ -31,7 +31,14 @@ function createWrapper() {
                     return 'entity_name_example';
                 }
             },
-            validationService: {}
+            validationService: {},
+            acl: {
+                can: (identifier) => {
+                    if (!identifier) { return true; }
+
+                    return privileges.includes(identifier);
+                }
+            }
         },
         stubs: {
             'sw-card': true,
@@ -49,12 +56,12 @@ function createWrapper() {
 }
 
 describe('src/module/sw-settings-custom-field/component/sw-custom-field-set-detail-base/sw-custom-field-detail-base', () => {
-    it('should be a Vue.js component', () => {
+    it('should be a Vue.js component', async () => {
         const wrapper = createWrapper();
-        expect(wrapper.isVueInstance()).toBe(true);
+        expect(wrapper.vm).toBeTruthy();
     });
 
-    it('should have a position field', () => {
+    it('should have a position field', async () => {
         const wrapper = createWrapper();
 
         const positionField = wrapper.findAll('.sw-field-stub[label=position]');
