@@ -24,6 +24,16 @@
         {% block sw_sales_channel_menu_navigation %}
             <nav class="sw-admin-menu__navigation">
 
+                {% block sw_sales_channel_menu_navigation_main_list_search %}
+                    <div v-if="menuItems.length >= 10 || searchTerm.length"
+                         class="sw-admin-menu__sales-channel-search collapsible-text">
+                        <sw-simple-search-field class="sw-field--sales-channel-search"
+                                                v-model="searchTerm"
+                                                @search-term-change="onSearchTermChange">
+                        </sw-simple-search-field>
+                    </div>
+                {% endblock %}
+
                 {% block sw_sales_channel_menu_navigation_main_list %}
                     <ul class="sw-admin-menu__navigation-list">
 

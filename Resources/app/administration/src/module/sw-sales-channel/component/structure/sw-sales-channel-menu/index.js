@@ -13,7 +13,8 @@ Component.register('sw-sales-channel-menu', {
         return {
             salesChannels: [],
             menuItems: [],
-            showModal: false
+            showModal: false,
+            searchTerm: ''
         };
     },
 
@@ -51,8 +52,16 @@ Component.register('sw-sales-channel-menu', {
             this.$root.$off('on-change-application-language', this.loadEntityData);
         },
 
+        onSearchTermChange() {
+            this.loadEntityData();
+        },
+
         loadEntityData() {
             const criteria = new Criteria();
+
+            if (this.searchTerm.trim().length) {
+                criteria.addFilter(Criteria.contains('sales_channel.name', this.searchTerm.trim()));
+            }
 
             criteria.setPage(1);
             criteria.setLimit(500);

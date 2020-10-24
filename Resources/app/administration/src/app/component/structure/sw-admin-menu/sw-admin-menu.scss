@@ -227,6 +227,16 @@ $sw-admin-menu-shop-status-ok: $color-emerald;
         font-weight: bold;
     }
 
+    .sw-sales-channel-menu {
+        .sw-admin-menu__sales-channel-search {
+            padding: 0 30px 12px;
+
+            .sw-field--sales-channel-search {
+                margin-bottom: 0;
+            }
+        }
+    }
+
     .sw-admin-menu__flyout {
         background-color: $sw-admin-menu-color-active;
         min-width: $sw-admin-menu-width-flyout;
@@ -388,6 +398,10 @@ $sw-admin-menu-shop-status-ok: $color-emerald;
     }
 
     &.is--collapsed {
+        .sw-admin-menu__sales-channel-search {
+            display: none;
+        }
+
         .sw-admin-menu__user-actions {
             border-left: 2px solid $sw-admin-menu-color-text-secondary;
             left: $sw-admin-menu-width-collapsed;
