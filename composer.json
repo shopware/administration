@@ -29,11 +29,11 @@
     },
     "require": {
         "php": "^7.4.3 || ^8.0",
-        "shopware/core": "*",
+        "shopware/core": "v6.4.5.0",
         "symfony/framework-bundle": "~5.3.0",
         "symfony/http-foundation": "~5.3.0",
-        "symfony/routing": "~5.3.0",
-        "symfony/mime": "~5.3.0"
+        "symfony/mime": "~5.3.0",
+        "symfony/routing": "~5.3.0"
     },
     "version": "6.4.5.0"
 }
