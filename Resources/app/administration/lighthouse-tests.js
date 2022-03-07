@@ -6,10 +6,11 @@ const lighthouse = require('lighthouse');
 const axios = require('axios');
 const _get = require('lodash/get');
 
-
 const APP_URL = process.env.APP_URL;
 const PROJECT_ROOT = process.env.PROJECT_ROOT;
 const DD_API_KEY = process.env.DD_API_KEY;
+const LH_PORT = process.env.LH_PORT ?? 8041;
+
 
 if (!APP_URL) {
     throw new Error('The environment variable "APP_URL" have to be defined.');
@@ -23,7 +24,7 @@ if (!DD_API_KEY) {
     // eslint-disable-next-line no-console
     console.warn('' +
         'WARNING: The environment variable "DD_API_KEY" have to defined. ' +
-        'Otherwise it can\' send metrics to datadog.');
+        'Otherwise it can\'t send metrics to datadog.');
 }
 
 /**
@@ -135,7 +136,7 @@ async function main() {
     // create folder for artifacts
     fse.mkdirpSync(path.join(PROJECT_ROOT, '/build/artifacts/lighthouse-results/'));
 
-    const PORT = 8041;
+    const PORT = LH_PORT;
 
     const browser = await puppeteer.launch({
         args: [
