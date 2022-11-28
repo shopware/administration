@@ -1,10 +1,8 @@
 import { createLocalVue, shallowMount } from '@vue/test-utils';
-import 'src/module/sw-promotion/component/sw-promotion-discount-component';
+import swPromotionDiscountComponent from 'src/module/sw-promotion-v2/component/sw-promotion-discount-component';
 
-/**
- * @deprecated tag:v6.5.0 - will be removed, use `sw-promotion-v2` instead
- * @feature-deprecated (flag:FEATURE_NEXT_13810)
- */
+Shopware.Component.register('sw-promotion-discount-component', swPromotionDiscountComponent);
+
 async function createWrapper(privileges = []) {
     const localVue = createLocalVue();
     localVue.directive('tooltip', {});
@@ -122,7 +120,7 @@ async function createWrapper(privileges = []) {
     });
 }
 
-describe('src/module/sw-promotion/component/sw-promotion-discount-component', () => {
+describe('src/module/sw-promotion-v2/component/sw-promotion-discount-component', () => {
     let wrapper;
 
     beforeEach(async () => {

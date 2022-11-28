@@ -1,17 +1,16 @@
-import { DiscountTypes, DiscountScopes, PromotionPermissions } from 'src/module/sw-promotion/helper/promotion.helper';
+import { DiscountTypes, DiscountScopes, PromotionPermissions } from 'src/module/sw-promotion-v2/helper/promotion.helper';
 import template from './sw-promotion-discount-component.html.twig';
 import './sw-promotion-discount-component.scss';
 import DiscountHandler from './handler';
 
-const { Component, Mixin } = Shopware;
+const { Mixin } = Shopware;
 const { Criteria } = Shopware.Data;
 const discountHandler = new DiscountHandler();
 
 /**
- * @deprecated tag:v6.5.0 - will be removed, use `sw-promotion-v2` instead
+ * @private
  */
-// eslint-disable-next-line sw-deprecation-rules/private-feature-declarations
-Component.register('sw-promotion-discount-component', {
+export default {
     template,
 
     inject: [
@@ -539,4 +538,4 @@ Component.register('sw-promotion-discount-component', {
                 .then((result) => { this.restrictedRules = result; });
         },
     },
-});
+};

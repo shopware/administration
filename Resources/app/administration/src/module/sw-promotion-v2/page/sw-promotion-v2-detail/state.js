@@ -1,7 +1,6 @@
 /**
- * @deprecated tag:v6.5.0 - will be removed, use `sw-promotion-v2` instead
+ * @private
  */
-// eslint-disable-next-line sw-deprecation-rules/private-feature-declarations
 export default {
     namespaced: true,
 
