@@ -1,11 +1,9 @@
 import { shallowMount } from '@vue/test-utils';
-import 'src/module/sw-promotion/view/sw-promotion-detail-discounts';
-import promotionState from 'src/module/sw-promotion/page/sw-promotion-detail/state';
+import swPromotionDetailDiscounts from 'src/module/sw-promotion-v2/view/sw-promotion-detail-discounts';
+import promotionState from 'src/module/sw-promotion-v2/page/sw-promotion-v2-detail/state';
 
-/**
- * @deprecated tag:v6.5.0 - will be removed, use `sw-promotion-v2` instead
- * @feature-deprecated (flag:FEATURE_NEXT_13810)
- */
+Shopware.Component.register('sw-promotion-detail-discounts', swPromotionDetailDiscounts);
+
 async function createWrapper(privileges = []) {
     return shallowMount(await Shopware.Component.build('sw-promotion-detail-discounts'), {
         stubs: {
@@ -36,7 +34,7 @@ async function createWrapper(privileges = []) {
     });
 }
 
-describe('src/module/sw-promotion/view/sw-promotion-detail-discounts', () => {
+describe('src/module/sw-promotion-v2/view/sw-promotion-detail-discounts', () => {
     beforeAll(() => {
         Shopware.State.registerModule('swPromotionDetail', promotionState);
     });
