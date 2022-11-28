@@ -1,14 +1,11 @@
-import { DiscountTypes, DiscountScopes } from 'src/module/sw-promotion/helper/promotion.helper';
+import { DiscountTypes, DiscountScopes } from 'src/module/sw-promotion-v2/helper/promotion.helper';
 import template from './sw-promotion-detail-discounts.html.twig';
 import './sw-promotion-detail-discounts.scss';
 
-const { Component } = Shopware;
-
 /**
- * @deprecated tag:v6.5.0 - will be removed, use `sw-promotion-v2` instead
+ * @private
  */
-// eslint-disable-next-line sw-deprecation-rules/private-feature-declarations
-Component.register('sw-promotion-detail-discounts', {
+export default {
     template,
 
     inject: ['repositoryFactory', 'acl'],
@@ -81,4 +78,4 @@ Component.register('sw-promotion-detail-discounts', {
             });
         },
     },
-});
+};

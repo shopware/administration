@@ -1,12 +1,7 @@
-import DiscountComponentHandler from 'src/module/sw-promotion/component/sw-promotion-discount-component/handler';
-import { DiscountTypes } from 'src/module/sw-promotion/helper/promotion.helper';
+import DiscountComponentHandler from 'src/module/sw-promotion-v2/component/sw-promotion-discount-component/handler';
+import { DiscountTypes } from 'src/module/sw-promotion-v2/helper/promotion.helper';
 
-/**
- * @deprecated tag:v6.5.0 - will be removed, use `sw-promotion-v2` instead
- * @feature-deprecated (flag:FEATURE_NEXT_13810)
- */
-
-describe('module/sw-promotion/component/sw-promotion-discount-component/handler.js', () => {
+describe('module/sw-promotion-v2/component/sw-promotion-discount-component/handler.js', () => {
     it('should have a min-value function that returns 0.00', async () => {
         const cmp = new DiscountComponentHandler();
         expect(cmp.getMinValue()).toBe(0.00);
