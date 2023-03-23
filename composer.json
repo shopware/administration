@@ -27,11 +27,11 @@
     "require": {
         "php": "~8.1.0 || ~8.2.0",
         "doctrine/dbal": "^3.6",
-        "shopware/core": "*",
+        "shopware/core": "v6.5.0.0-rc3",
         "symfony/framework-bundle": "~6.2.0",
         "symfony/http-foundation": "~6.2.0",
-        "symfony/routing": "~6.2.0",
-        "symfony/mime": "~6.2.0"
+        "symfony/mime": "~6.2.0",
+        "symfony/routing": "~6.2.0"
     },
     "version": "6.5.0.0-rc3"
 }

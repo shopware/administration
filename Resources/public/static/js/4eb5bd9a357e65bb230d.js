@@ -1,0 +1,1 @@
+(this.webpackJsonpAdministration=this.webpackJsonpAdministration||[]).push([[515],{"4gDu":function(n,s,t){"use strict";t.r(s);s.default={template:'\n{% block sw_cms_block_form %}\n<div class="sw-cms-block-form">\n    <slot name="content"></slot>\n</div>\n{% endblock %}\n'}}}]);
