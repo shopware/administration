@@ -1,0 +1,1 @@
+(this.webpackJsonpAdministration=this.webpackJsonpAdministration||[]).push([[516],{F8jZ:function(s,n,i){"use strict";i.r(n);n.default={template:'\n{% block sw_cms_block_image_gallery %}\n<div class="sw-cms-block-image-gallery">\n    <slot name="imageGallery"></slot>\n</div>\n{% endblock %}\n'}}}]);

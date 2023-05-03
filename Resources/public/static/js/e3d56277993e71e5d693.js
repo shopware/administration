@@ -1,0 +1,1 @@
+(this.webpackJsonpAdministration=this.webpackJsonpAdministration||[]).push([[499],{jUbj:function(n,t,o){"use strict";o.r(t);t.default={template:"\n{% block sw_product_media_form_cover_preview %}\n{% endblock %}\n",data:function(){return{columnCount:4,showCoverLabel:!1}}}}}]);
