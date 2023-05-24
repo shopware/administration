@@ -1,0 +1,1 @@
+(this.webpackJsonpAdministration=this.webpackJsonpAdministration||[]).push([[542],{J9X9:function(n,i,t){"use strict";t.r(i);i.default={template:'\n{% block sw_first_run_wizard_mailer_base %}\n<router-view v-on="$listeners" />\n{% endblock %}\n'}}}]);
