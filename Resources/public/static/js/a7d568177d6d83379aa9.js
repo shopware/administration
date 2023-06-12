@@ -1,0 +1,1 @@
+(this.webpackJsonpAdministration=this.webpackJsonpAdministration||[]).push([[612],{dkhs:function(t,e,s){"use strict";s.r(e),e.default={data:function(){return{propertyNames:{label:this.$tc("sw-settings-custom-field.customField.detail.labelLabel"),placeholder:this.$tc("sw-settings-custom-field.customField.detail.labelPlaceholder")}}}}}}]);
