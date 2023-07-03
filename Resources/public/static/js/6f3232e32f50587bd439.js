@@ -1,0 +1,1 @@
+(this.webpackJsonpAdministration=this.webpackJsonpAdministration||[]).push([[518],{eYl1:function(s,t,n){"use strict";n.r(t);t.default={template:'\n{% block sw_cms_block_product_slider %}\n<div class="sw-cms-block-product-slider">\n    <slot name="productSlider"></slot>\n</div>\n{% endblock %}\n'}}}]);
