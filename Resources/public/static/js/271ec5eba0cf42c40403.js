@@ -1,0 +1,2 @@
+(this.webpackJsonpAdministration=this.webpackJsonpAdministration||[]).push([[503],{V3gw:function(n,t,o){"use strict";o.r(t);t.default={template:"\n{% block sw_product_media_form_cover_preview %}\n{% endblock %}\n",data:function(){return{columnCount:4,showCoverLabel:!1}}}}}]);
+//# sourceMappingURL=271ec5eba0cf42c40403.js.map

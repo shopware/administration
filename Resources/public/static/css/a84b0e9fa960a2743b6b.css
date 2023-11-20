@@ -1,0 +1,1 @@
+@keyframes ellipsis{to{width:1.25rem}}.sw-media-quickinfo-metadata-item__term{font-size:14px;color:#52667a}.sw-media-quickinfo-metadata-item__description{white-space:nowrap;text-overflow:ellipsis;overflow:hidden;font-size:14px}@media screen and (max-width:768px){.sw-media-quickinfo-metadata-item__description{margin-bottom:16px}}

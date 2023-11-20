@@ -1,0 +1,2 @@
+(this.webpackJsonpAdministration=this.webpackJsonpAdministration||[]).push([[532],{OE6m:function(n,e,i){"use strict";i.r(e);e.default={template:'\n{% block sw_cms_element_sidebar_filter_config %}\n<div class="sw-cms-el-config-sidebar-filter">\n\n    \n    {% block sw_cms_element_sidebar_filter_config_info %}\n    <sw-alert variant="info">\n        {{ $tc(\'sw-cms.elements.general.config.infoText.listingElement\') }}\n    </sw-alert>\n    {% endblock %}\n</div>\n{% endblock %}\n'}}}]);
+//# sourceMappingURL=9f2fe07261e7ddb129a9.js.map
