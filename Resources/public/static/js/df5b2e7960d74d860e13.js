@@ -1,0 +1,2 @@
+(this.webpackJsonpAdministration=this.webpackJsonpAdministration||[]).push([[516],{XyZ0:function(n,s,t){"use strict";t.r(s);s.default={template:'\n{% block sw_cms_block_product_description_reviews %}\n<div class="sw-cms-block-product-description-reviews">\n    <slot name="content">\n        \n        {% block sw_cms_block_product_description_reviews_slot_content %}{% endblock %}\n    </slot>\n</div>\n{% endblock %}\n'}}}]);
+//# sourceMappingURL=df5b2e7960d74d860e13.js.map

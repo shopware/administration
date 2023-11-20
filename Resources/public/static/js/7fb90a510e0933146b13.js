@@ -1,0 +1,2 @@
+(this.webpackJsonpAdministration=this.webpackJsonpAdministration||[]).push([[524],{lnpB:function(n,s,t){"use strict";t.r(s);s.default={template:'\n{% block sw_cms_block_sidebar_filter %}\n<div class="sw-cms-block-sidebar-filter">\n    <slot name="content"></slot>\n</div>\n{% endblock %}\n'}}}]);
+//# sourceMappingURL=7fb90a510e0933146b13.js.map

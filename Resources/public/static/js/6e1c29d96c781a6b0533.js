@@ -1,0 +1,2 @@
+(this.webpackJsonpAdministration=this.webpackJsonpAdministration||[]).push([[643],{"4Wvi":function(t,i,n){"use strict";n.r(i);i.default={template:"\n{% block sw_rule_modal_basic_info_description %}\n{% endblock %}\n\n",computed:{modalTitle:function(){return this.$tc("sw-settings-shipping.shippingPriceModal.modalTitle")}},methods:{createdComponent:function(){this.$super("createdComponent")}}}}}]);
+//# sourceMappingURL=6e1c29d96c781a6b0533.js.map
