@@ -1,0 +1,2 @@
+(this.webpackJsonpAdministration=this.webpackJsonpAdministration||[]).push([[609],{v7YX:function(t,e,s){"use strict";s.r(e),e.default={data:function(){return{propertyNames:{label:this.$tc("sw-settings-custom-field.customField.detail.labelLabel"),helpText:this.$tc("sw-settings-custom-field.customField.detail.labelHelpText")}}}}}}]);
+//# sourceMappingURL=00596bca5b3e6f16da05.js.map

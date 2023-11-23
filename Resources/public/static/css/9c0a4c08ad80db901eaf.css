@@ -1,0 +1,1 @@
+.sw-flow-sequence{display:grid;grid-template-columns:auto;grid-template-rows:auto 1fr;width:min-content}.sw-flow-sequence__true-block{grid-column:2;grid-row:1}.sw-flow-sequence__true-block.has--selector{grid-row:1/span 2}.sw-flow-sequence__false-block{grid-column:1;grid-row:2/span 2}

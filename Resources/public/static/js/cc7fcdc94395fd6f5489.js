@@ -1,0 +1,2 @@
+(this.webpackJsonpAdministration=this.webpackJsonpAdministration||[]).push([[517],{"2oBh":function(n,t,s){"use strict";s.r(t);t.default={template:'\n{% block sw_cms_block_product_listing %}\n<div class="sw-cms-block-product-listing">\n    <slot name="content"></slot>\n</div>\n{% endblock %}\n'}}}]);
+//# sourceMappingURL=cc7fcdc94395fd6f5489.js.map
