@@ -1,0 +1,2 @@
+(this.webpackJsonpAdministration=this.webpackJsonpAdministration||[]).push([[502],{"q+bh":function(t,i,s){"use strict";s.r(i);i.default={template:"",watch:{value:{handler:function(){var t=this;this.$refs.textEditor&&this.value&&(this.isEmpty=this.emptyCheck(this.content),this.placeholderVisible=this.isEmpty,this.$nextTick((function(){t.setWordCount(),t.setTablesResizable()})))}}}}}}]);
+//# sourceMappingURL=65bfd81f2e7976b2ac2a.js.map

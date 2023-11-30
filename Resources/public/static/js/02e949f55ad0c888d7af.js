@@ -1,0 +1,2 @@
+(this.webpackJsonpAdministration=this.webpackJsonpAdministration||[]).push([[123],{Iy14:function(t,s,n){var e=n("w1j/");e.__esModule&&(e=e.default),"string"==typeof e&&(e=[[t.i,e,""]]),e.locals&&(t.exports=e.locals);(0,n("P8hj").default)("adbb4546",e,!0,{})},upBC:function(t,s,n){"use strict";n.r(s);n("Iy14"),s.default={template:'\n{% block sw_cms_block_text_teaser %}\n<div class="sw-cms-block-text-teaser">\n    <slot name="content"></slot>\n</div>\n{% endblock %}\n'}},"w1j/":function(t,s,n){}}]);
+//# sourceMappingURL=02e949f55ad0c888d7af.js.map
