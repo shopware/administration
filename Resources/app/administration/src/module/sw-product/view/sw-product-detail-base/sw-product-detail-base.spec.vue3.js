@@ -2,94 +2,88 @@
  * @package inventory
  */
 
-import { shallowMount } from '@vue/test-utils';
-import swProductDetailBase from 'src/module/sw-product/view/sw-product-detail-base';
-import swProductBasicForm from 'src/module/sw-product/component/sw-product-basic-form';
-import 'src/app/component/utils/sw-inherit-wrapper';
-import 'src/app/component/base/sw-inheritance-switch';
-import 'src/app/component/form/sw-field';
+import { mount } from '@vue/test-utils_v3';
 import productStore from 'src/module/sw-product/page/sw-product-detail/state';
 import EntityCollection from 'src/core/data/entity-collection.data';
 
 const { Utils } = Shopware;
 
-Shopware.Component.register('sw-product-detail-base', swProductDetailBase);
-Shopware.Component.register('sw-product-basic-form', swProductBasicForm);
-
 async function createWrapper() {
-    return shallowMount(await Shopware.Component.build('sw-product-detail-base'), {
-        stubs: {
-            'sw-page': {
-                template: `
+    return mount(await wrapTestComponent('sw-product-detail-base', { sync: true }), {
+        global: {
+            stubs: {
+                'sw-page': {
+                    template: `
                     <div class="sw-page">
                         <slot name="smart-bar-actions"></slot>
                         <slot name="content">CONTENT</slot>
                         <slot></slot>
                     </div>`,
-            },
-            'sw-product-detail-base__review-card': true,
-            'sw-data-grid': {
-                props: ['dataSource'],
-                template: `
+                },
+                'sw-product-detail-base__review-card': true,
+                'sw-data-grid': {
+                    props: ['dataSource'],
+                    template: `
                     <div>
                         <template v-for="item in dataSource">
                             <slot name="actions" v-bind="{ item }"></slot>
                         </template>
                     </div>`,
+                },
+                'sw-product-category-form': true,
+                'sw-product-deliverability-form': true,
+                'sw-product-deliverability-downloadable-form': true,
+                'sw-product-download-form': true,
+                'sw-product-price-form': true,
+                'sw-product-basic-form': await wrapTestComponent('sw-product-basic-form', { sync: true }),
+                'sw-product-feature-set-form': true,
+                'sw-product-settings-form': true,
+                'sw-inherit-wrapper': await wrapTestComponent('sw-inherit-wrapper', { sync: true }),
+                'sw-inheritance-switch': await wrapTestComponent('sw-inheritance-switch', { sync: true }),
+                'sw-empty-state': true,
+                'sw-card': {
+                    template: '<div><slot></slot><slot name="title"></slot><slot name="grid"></slot></div>',
+                },
+                'sw-context-menu-item': true,
+                'sw-media-modal-v2': true,
+                'sw-container': true,
+                'sw-field': await wrapTestComponent('sw-field'),
+                'sw-text-editor': true,
+                'sw-switch-field': true,
+                'sw-product-media-form': true,
+                'sw-entity-single-select': true,
+                'sw-help-text': true,
+                'sw-icon': { template: '<div class="sw-icon" @click="$emit(\'click\')"></div>' },
+                'sw-text-field': true,
+                'sw-select-field': true,
+                'router-link': true,
+                'sw-skeleton': true,
             },
-            'sw-product-category-form': true,
-            'sw-product-deliverability-form': true,
-            'sw-product-deliverability-downloadable-form': true,
-            'sw-product-download-form': true,
-            'sw-product-price-form': true,
-            'sw-product-basic-form': await Shopware.Component.build('sw-product-basic-form'),
-            'sw-product-feature-set-form': true,
-            'sw-product-settings-form': true,
-            'sw-inherit-wrapper': await Shopware.Component.build('sw-inherit-wrapper'),
-            'sw-inheritance-switch': await Shopware.Component.build('sw-inheritance-switch'),
-            'sw-empty-state': true,
-            'sw-card': {
-                template: '<div><slot></slot><slot name="title"></slot><slot name="grid"></slot></div>',
-            },
-            'sw-context-menu-item': true,
-            'sw-media-modal-v2': true,
-            'sw-container': true,
-            'sw-field': await Shopware.Component.build('sw-field'),
-            'sw-text-editor': true,
-            'sw-switch-field': true,
-            'sw-product-media-form': true,
-            'sw-entity-single-select': true,
-            'sw-help-text': true,
-            'sw-icon': { template: '<div class="sw-icon" @click="$emit(\'click\')"></div>' },
-            'sw-text-field': true,
-            'sw-select-field': true,
-            'router-link': true,
-            'sw-skeleton': true,
-        },
-        mocks: {
-            $route: {
-                name: 'sw.product.detail.base',
-                params: {
-                    id: '1234',
+            mocks: {
+                $route: {
+                    name: 'sw.product.detail.base',
+                    params: {
+                        id: '1234',
+                    },
                 },
             },
-        },
-        provide: {
-            repositoryFactory: {
-                create: () => ({
-                    search: () => Promise.resolve({
-                        first: () => {
-                            return {
-                                folder: {},
-                            };
-                        },
+            provide: {
+                repositoryFactory: {
+                    create: () => ({
+                        search: () => Promise.resolve({
+                            first: () => {
+                                return {
+                                    folder: {},
+                                };
+                            },
+                        }),
+                        get: () => Promise.resolve({}),
+                        searchIds: () => Promise.resolve({
+                            data: [],
+                        }),
+                        create: () => ({ id: 'id' }),
                     }),
-                    get: () => Promise.resolve({}),
-                    searchIds: () => Promise.resolve({
-                        data: [],
-                    }),
-                    create: () => ({ id: 'id' }),
-                }),
+                },
             },
         },
     });
@@ -279,10 +273,10 @@ describe('src/module/sw-product/view/sw-product-detail-base', () => {
     it('should able to open media modal', async () => {
         const wrapper = await createWrapper();
 
-        const productMediaFrom = wrapper.find('sw-product-media-form-stub');
+        const productMediaFrom = wrapper.findComponent('sw-product-media-form-stub');
         await productMediaFrom.vm.$emit('media-open');
 
-        const mediaModal = wrapper.find('sw-media-modal-v2-stub');
+        const mediaModal = wrapper.findComponent('sw-media-modal-v2-stub');
 
         expect(mediaModal.exists()).toBe(true);
         expect(mediaModal.attributes('entity-context')).toBe('product');
@@ -291,10 +285,10 @@ describe('src/module/sw-product/view/sw-product-detail-base', () => {
     it('should able to close media modal', async () => {
         const wrapper = await createWrapper();
 
-        const productMediaFrom = wrapper.find('sw-product-media-form-stub');
+        const productMediaFrom = wrapper.findComponent('sw-product-media-form-stub');
         await productMediaFrom.vm.$emit('media-open');
 
-        const mediaModal = wrapper.find('sw-media-modal-v2-stub');
+        const mediaModal = wrapper.findComponent('sw-media-modal-v2-stub');
         await mediaModal.vm.$emit('modal-close');
 
         expect(mediaModal.exists()).toBe(false);
@@ -305,10 +299,10 @@ describe('src/module/sw-product/view/sw-product-detail-base', () => {
 
         const spyOnAddMedia = jest.spyOn(wrapper.vm, 'addMedia');
 
-        const productMediaFrom = wrapper.find('sw-product-media-form-stub');
+        const productMediaFrom = wrapper.findComponent('sw-product-media-form-stub');
         await productMediaFrom.vm.$emit('media-open');
 
-        const mediaModal = wrapper.find('sw-media-modal-v2-stub');
+        const mediaModal = wrapper.findComponent('sw-media-modal-v2-stub');
         await mediaModal.vm.$emit('media-modal-selection-change', null);
 
         expect(spyOnAddMedia).not.toHaveBeenCalled();
@@ -319,10 +313,10 @@ describe('src/module/sw-product/view/sw-product-detail-base', () => {
 
         const media = { id: 'id', fileName: 'fileName', fileSize: 101, url: 'http://image.jpg' };
 
-        const productMediaFrom = wrapper.find('sw-product-media-form-stub');
+        const productMediaFrom = wrapper.findComponent('sw-product-media-form-stub');
         await productMediaFrom.vm.$emit('media-open');
 
-        const mediaModal = wrapper.find('sw-media-modal-v2-stub');
+        const mediaModal = wrapper.findComponent('sw-media-modal-v2-stub');
         await mediaModal.vm.$emit('media-modal-selection-change', [media]);
 
         expect(wrapper.vm.product.media).toEqual(expect.arrayContaining([{
@@ -358,10 +352,10 @@ describe('src/module/sw-product/view/sw-product-detail-base', () => {
             ]),
         });
 
-        const productMediaFrom = wrapper.find('sw-product-media-form-stub');
+        const productMediaFrom = wrapper.findComponent('sw-product-media-form-stub');
         await productMediaFrom.vm.$emit('media-open');
 
-        const mediaModal = wrapper.find('sw-media-modal-v2-stub');
+        const mediaModal = wrapper.findComponent('sw-media-modal-v2-stub');
         await mediaModal.vm.$emit('media-modal-selection-change', [media]);
 
         expect(wrapper.vm.createNotificationError).toHaveBeenCalledWith({
@@ -377,10 +371,10 @@ describe('src/module/sw-product/view/sw-product-detail-base', () => {
 
         const media = { id: 'id', fileName: 'fileName', fileSize: 101 };
 
-        const productMediaFrom = wrapper.find('sw-product-media-form-stub');
+        const productMediaFrom = wrapper.findComponent('sw-product-media-form-stub');
         await productMediaFrom.vm.$emit('media-open');
 
-        const mediaModal = wrapper.find('sw-media-modal-v2-stub');
+        const mediaModal = wrapper.findComponent('sw-media-modal-v2-stub');
         await mediaModal.vm.$emit('media-modal-selection-change', [media]);
 
         expect(wrapper.vm.product.coverId).toBe(media.id);
@@ -520,7 +514,7 @@ describe('src/module/sw-product/view/sw-product-detail-base', () => {
     it('should not set media cover when adding new glb file', async () => {
         const wrapper = await createWrapper();
 
-        const productMediaFrom = wrapper.find('sw-product-media-form-stub');
+        const productMediaFrom = wrapper.findComponent('sw-product-media-form-stub');
         await productMediaFrom.vm.$emit('media-open');
 
         const media = {
@@ -530,7 +524,7 @@ describe('src/module/sw-product/view/sw-product-detail-base', () => {
             url: 'htt://example.com/3dfile.glb',
         };
 
-        const mediaModal = wrapper.find('sw-media-modal-v2-stub');
+        const mediaModal = wrapper.findComponent('sw-media-modal-v2-stub');
         await mediaModal.vm.$emit('media-modal-selection-change', [media]);
 
         expect(wrapper.vm.product.coverId).toBeNull();
