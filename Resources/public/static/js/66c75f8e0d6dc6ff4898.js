@@ -1,0 +1,2 @@
+(this.webpackJsonpAdministration=this.webpackJsonpAdministration||[]).push([[515],{gPs8:function(s,n,c){"use strict";c.r(n);n.default={template:'\n{% block sw_cms_block_cross_selling %}\n<div class="sw-cms-block-cross-selling">\n    <slot name="content">\n        \n        {% block sw_cms_block_cross_selling_slot_content %}{% endblock %}\n    </slot>\n</div>\n{% endblock %}\n'}}}]);
+//# sourceMappingURL=66c75f8e0d6dc6ff4898.js.map
