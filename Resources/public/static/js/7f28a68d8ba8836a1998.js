@@ -1,0 +1,1 @@
+(this.webpackJsonpAdministration=this.webpackJsonpAdministration||[]).push([[522],{JkO8:function(n,s,i){"use strict";i.r(s);s.default={template:'\n{% block sw_cms_block_image %}\n<div class="sw-cms-block-image">\n    <slot name="image">\n        \n        {% block sw_cms_block_image_slot_image %}{% endblock %}\n    </slot>\n</div>\n{% endblock %}\n'}}}]);
