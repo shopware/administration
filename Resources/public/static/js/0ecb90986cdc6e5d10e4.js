@@ -1,0 +1,1 @@
+"use strict";(window.webpackJsonpAdministration=window.webpackJsonpAdministration||[]).push([[66813],{66813:function(t,e,o){o.r(e);let{State:n}=Shopware;e.default={computed:{generateData:{get(){return n.get("swBulkEdit")?.orderDocuments?.storno?.value},set(t){n.commit("swBulkEdit/setOrderDocumentsValue",{type:"storno",value:t})}}}}}}]);
