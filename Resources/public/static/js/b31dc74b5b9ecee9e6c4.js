@@ -1,0 +1,1 @@
+"use strict";(window.webpackJsonpAdministration=window.webpackJsonpAdministration||[]).push([[20603],{20603:function(n,o,t){t.r(o),t.d(o,{default:function(){return e}});var e={template:"\n{% block sw_product_media_form_cover_preview %}\n{% endblock %}\n",data(){return{columnCount:4,showCoverLabel:!1}}}}}]);

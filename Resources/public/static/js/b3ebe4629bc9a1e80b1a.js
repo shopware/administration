@@ -1,0 +1,9 @@
+(window.webpackJsonpAdministration=window.webpackJsonpAdministration||[]).push([[50052],{60060:function(){},50052:function(e,t,i){"use strict";i.r(t),i.d(t,{default:function(){return n}}),i(1476);let{Mixin:o}=Shopware;var n={template:'\n{% block sw_cms_el_vimeo_video %}\n<div class="sw-cms-el-vimeo-video">\n    \n    <iframe\n        class="sw-cms-el-vimeo-video__video"\n        :src="videoUrl"\n    ></iframe>\n</div>\n{% endblock %}\n',mixins:[o.getByName("cms-element")],computed:{videoID(){return this.element.config.videoID.value},byLine(){return this.element.config.byLine.value?"":`byline=${this.element.config.byLine.value}&`},color(){return this.element.config.color.value?`color=${this.element.config.color.value}&`.replace("#",""):""},doNotTrack(){return this.element.config.doNotTrack.value?`dnt=${this.element.config.doNotTrack.value}&`:""},loop(){return this.element.config.loop.value?`loop=${this.element.config.loop.value}&`:""},mute(){return this.element.config.mute.value?`mute=${this.element.config.mute.value}&`:""},title(){return this.element.config.title.value?"":`title=${this.element.config.title.value}&`},portrait(){return this.element.config.portrait.value?"":`portrait=${this.element.config.portrait.value}`},controls(){return this.element.config.controls.value?"":`controls=${this.element.config.value}`},videoUrl(){return`https://player.vimeo.com/video/
+            ${this.videoID}?\
+            ${this.byLine}\
+            ${this.color}\
+            ${this.doNotTrack}\
+            ${this.loop}\
+            ${this.controls}\
+            ${this.title}\
+            ${this.portrait}`.replace(/ /g,"")}},created(){this.createdComponent()},methods:{createdComponent(){this.initElementConfig("vimeo-video"),this.initElementData("vimeo-video")}}}},1476:function(e,t,i){var o=i(60060);o.__esModule&&(o=o.default),"string"==typeof o&&(o=[[e.id,o,""]]),o.locals&&(e.exports=o.locals),i(45346).Z("44a6086f",o,!0,{})}}]);

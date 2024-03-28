@@ -1,0 +1,1 @@
+"use strict";(window.webpackJsonpAdministration=window.webpackJsonpAdministration||[]).push([[13095],{13095:function(e,t,n){n.r(t);let{State:i}=Shopware;t.default={computed:{generateData:{get(){return i.get("swBulkEdit")?.orderDocuments?.credit_note?.value},set(e){i.commit("swBulkEdit/setOrderDocumentsValue",{type:"credit_note",value:e})}}}}}}]);
