@@ -1,0 +1,1 @@
+"use strict";(window.webpackJsonpAdministration=window.webpackJsonpAdministration||[]).push([[69174],{776760:function(n,t,i){i.r(t),i.d(t,{default:function(){return s}});var s={template:'\n{% block sw_cms_block_sidebar_filter %}\n<div class="sw-cms-block-sidebar-filter">\n    <slot name="content"></slot>\n</div>\n{% endblock %}\n'}}}]);
