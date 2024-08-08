@@ -1,0 +1,1 @@
+"use strict";(window.webpackJsonpAdministration=window.webpackJsonpAdministration||[]).push([[21238],{821238:function(n,i,a){a.r(i),a.d(i,{default:function(){return e}});var e={template:'\n{% block sw_cms_block_image_gallery %}\n<div class="sw-cms-block-image-gallery">\n    <slot name="imageGallery"></slot>\n</div>\n{% endblock %}\n'}}}]);
