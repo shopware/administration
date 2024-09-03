@@ -1,0 +1,1 @@
+"use strict";(window.webpackJsonpAdministration=window.webpackJsonpAdministration||[]).push([[47553],{347553:function(n,o,t){t.r(o),t.d(o,{default:function(){return i}});var i={template:'\n{% block sw_cms_block_product_listing %}\n<div class="sw-cms-block-product-listing">\n    <slot name="content"></slot>\n</div>\n{% endblock %}\n',compatConfig:Shopware.compatConfig}}}]);
