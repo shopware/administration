@@ -17,6 +17,7 @@ export default {
                     value: {
                         documentDate: today,
                         documentComment: null,
+                        forceDocumentCreation: false,
                     },
                 },
                 storno: {
@@ -24,6 +25,7 @@ export default {
                     value: {
                         documentDate: today,
                         documentComment: null,
+                        forceDocumentCreation: false,
                     },
                 },
                 delivery_note: {
@@ -35,6 +37,7 @@ export default {
                         },
                         documentDate: today,
                         documentComment: null,
+                        forceDocumentCreation: false,
                     },
                 },
                 credit_note: {
@@ -42,6 +45,7 @@ export default {
                     value: {
                         documentDate: today,
                         documentComment: null,
+                        forceDocumentCreation: false,
                     },
                 },
                 download: {
