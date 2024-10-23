@@ -327,6 +327,10 @@ export default {
                     searchCriteria.addSorting(Criteria.sort(this.sortBy, this.sortDirection));
                 }
 
+                if (this.sortBy !== 'productNumber') {
+                    searchCriteria.addSorting(Criteria.sort('product.productNumber', this.sortDirection));
+                }
+
                 // Start search
                 this.productRepository.search(searchCriteria).then((res) => {
                     this.total = res.total;
