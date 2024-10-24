@@ -15,6 +15,7 @@ export default {
 
     inject: [
         'cacheApiService',
+        'feature',
     ],
 
     mixins: [
