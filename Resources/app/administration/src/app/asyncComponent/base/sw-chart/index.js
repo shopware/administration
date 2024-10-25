@@ -1,4 +1,5 @@
 import VueApexCharts from 'vue-apexcharts';
+import apexLocales from './locales';
 import template from './sw-chart.html.twig';
 import './sw-chart.scss';
 
@@ -240,30 +241,7 @@ export default {
         defaultLocale() {
             const adminLocaleLanguage = Shopware.State.getters.adminLocaleLanguage;
 
-            let allowedLocales = [];
-            if (!this.feature.isActive('ADMIN_VITE')) {
-                // get all available languages in "apexcharts/dist/locales/**.json"
-                const languageFiles = require.context('apexcharts/dist/locales', false, /.json/);
-
-                // change string from "./en.json" to "en"
-                allowedLocales = languageFiles
-                    .keys()
-                    .map((filePath) => filePath.replace('./', ''))
-                    .map((filePath) => filePath.replace('.json', ''));
-            } else {
-                // get all available languages in "apexcharts/dist/locales/**.json"
-                // eslint-disable-next-line max-len
-                const languageFiles = import.meta.glob('./../../../../../node_modules/apexcharts/dist/locales/*.json', {
-                    eager: true,
-                });
-
-                // change string from "../../../../../node_modules/apexcharts/dist/locales/en.json" to "en"
-                allowedLocales = Object.keys(languageFiles)
-                    .map((filePath) => filePath.replace('../../../../../node_modules/apexcharts/dist/locales/', ''))
-                    .map((filePath) => filePath.replace('.json', ''));
-            }
-
-            if (allowedLocales.includes(adminLocaleLanguage)) {
+            if (Object.keys(apexLocales).includes(adminLocaleLanguage)) {
                 return adminLocaleLanguage;
             }
 
@@ -360,9 +338,8 @@ export default {
 
     methods: {
         createdComponent() {
-            return this.loadLocaleConfig().finally(() => {
-                this.isLoading = false;
-            });
+            this.loadLocaleConfig();
+            this.isLoading = false;
         },
 
         sortSeries(series) {
@@ -480,16 +457,8 @@ export default {
             return zeroTimestamps;
         },
 
-        async loadLocaleConfig() {
-            const defaultLocale = this.defaultLocale;
-
-            // ESLint can´t understand template strings in this import context
-            /* eslint-disable prefer-template, max-len */
-            const localeConfigModule = await import(
-                /* @vite-ignore */ '../../../../../node_modules/apexcharts/dist/locales/' + defaultLocale + '.json'
-            );
-
-            this.localeConfig = localeConfigModule?.default;
+        loadLocaleConfig() {
+            this.localeConfig = apexLocales[this.defaultLocale];
         },
     },
 };

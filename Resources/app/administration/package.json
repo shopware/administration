@@ -5,7 +5,7 @@
   "main": "./src/core/shopware.js",
   "types": "./types/index.d.ts",
   "scripts": {
-    "build": "mode=production node --no-deprecation ./node_modules/webpack/bin/webpack.js --config webpack.config.js",
+    "build": "ADMIN_VITE=$(jq -r '.ADMIN_VITE' \"$PROJECT_ROOT/var/config_js_features.json\") && [ \"$ADMIN_VITE\" = true ] && npm run vite build || mode=production node --no-deprecation ./node_modules/webpack/bin/webpack.js --config webpack.config.js",
     "code-mods": "node code-mods.js",
     "codemod:js-vue3-feature-flag-removal": "ts-node --transpileOnly ./scripts/codemods/js-vue3-feature-flag-removal/index.ts",
     "codemod:twig-feature-flag-removal": "ts-node --transpileOnly ./scripts/codemods/twig-feature-flag-removal/index.ts",
@@ -122,6 +122,7 @@
     "uuid": "8.3.2",
     "uuidv7": "0.5.3",
     "v-click-outside": "3.2.0",
+    "vite-plugin-symfony": "^7.0.4",
     "vue": "3.5.6",
     "vue-apexcharts": "1.6.2",
     "vue-i18n": "9.2.2",
