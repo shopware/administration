@@ -24,7 +24,7 @@ class Administration extends Bundle
     public function build(ContainerBuilder $container): void
     {
         parent::build($container);
-        parent::buildDefaultConfig($container);
+        $this->buildDefaultConfig($container);
 
         $container->addCompilerPass(new AdministrationMigrationCompilerPass(), PassConfig::TYPE_BEFORE_OPTIMIZATION, 0);
     }
