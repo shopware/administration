@@ -45,7 +45,7 @@ import ModuleFilterFactory from 'src/core/data/filter-factory.data';
 import type { VueI18n } from 'vue-i18n';
 import Store from 'src/app/store';
 import { createExtendableSetup, overrideComponentSetup } from 'src/app/adapter/composition-extension-system';
-import { ref } from 'vue';
+import * as Vue from 'vue';
 import type { DefineComponent, Ref } from 'vue';
 import ExtensionApi from './extension-api';
 
@@ -111,7 +111,7 @@ class ShopwareClass implements CustomShopwareProperties {
     /**
      * @private
      */
-    static #overrideComponents: Ref<Array<DefineComponent<unknown, unknown, unknown>>> = ref([]);
+    static #overrideComponents: Ref<Array<DefineComponent<unknown, unknown, unknown>>> = Vue.ref([]);
 
     public Module = {
         register: ModuleFactory.registerModule,
@@ -205,6 +205,8 @@ class ShopwareClass implements CustomShopwareProperties {
     public Application = application;
 
     public Feature = Feature;
+
+    public Vue = Vue;
 
     public ApiService = {
         register: ApiServiceFactory.register,
