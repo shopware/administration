@@ -17,7 +17,7 @@ export default class Feature {
                 flagName,
                 isActive,
             ]) => {
-                this.flags[flagName] = isActive;
+                this.flags[flagName.toUpperCase()] = isActive;
             },
         );
     }
@@ -27,6 +27,8 @@ export default class Feature {
     }
 
     static isActive(flagName: string): boolean {
+        flagName = flagName.toUpperCase();
+
         if (!this.flags.hasOwnProperty(flagName)) {
             // if not set, its false
             return false;
