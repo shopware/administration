@@ -542,7 +542,7 @@ describe('src/module/sw-settings-rule/page/sw-settings-rule-detail', () => {
         const apiLanguageId = Shopware.State.get('context').api.languageId;
         expect(Shopware.State.get('context').api.languageId).not.toBe('uuid1');
 
-        await wrapper.find('.sw-select__select-indicator').trigger('click');
+        await wrapper.find('.sw-select__selection').trigger('click');
         await flushPromises();
 
         await wrapper.find('.sw-select-result').trigger('click');
@@ -561,7 +561,7 @@ describe('src/module/sw-settings-rule/page/sw-settings-rule-detail', () => {
         const wrapper = await createWrapper();
         await flushPromises();
 
-        await wrapper.find('.sw-select__select-indicator').trigger('click');
+        await wrapper.find('.sw-select__selection').trigger('click');
         await flushPromises();
 
         await wrapper.find('.sw-select-result').trigger('click');
