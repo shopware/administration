@@ -1,0 +1,1 @@
+"use strict";(window.webpackJsonpAdministration=window.webpackJsonpAdministration||[]).push([[669],{100669:function(n,i,o){o.r(i),o.d(i,{default:function(){return s}});var s={template:'\n{% block sw_cms_block_image_slider %}\n<div class="sw-cms-block-image-slider">\n    <slot name="imageSlider"></slot>\n</div>\n{% endblock %}\n',compatConfig:Shopware.compatConfig}}}]);
