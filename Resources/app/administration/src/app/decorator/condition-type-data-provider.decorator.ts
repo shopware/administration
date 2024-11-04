@@ -84,7 +84,7 @@ Application.addServiceProviderDecorator('ruleConditionDataProviderService', (rul
         scopes: ['checkout'],
         group: 'customer',
     });
-    ruleConditionService.addCondition('customerRequestedCustomerGroup', {
+    ruleConditionService.addCondition('customerRequestedGroup', {
         component: 'sw-condition-generic',
         label: 'global.sw-condition.condition.customerRequestedGroupRule',
         scopes: ['checkout'],
