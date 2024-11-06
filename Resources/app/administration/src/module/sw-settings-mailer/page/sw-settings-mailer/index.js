@@ -119,7 +119,6 @@ export default {
             // Reset mailerSettings as local would take over certain values
             if (this.mailerSettings['core.mailerSettings.emailAgent'] === 'local') {
                 this.mailerSettings = {
-                    ...this.mailerSettings,
                     ...defaultMailerSettings,
                     'core.mailerSettings.emailAgent': 'local',
                 };
