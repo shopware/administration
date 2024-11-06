@@ -1,0 +1,1 @@
+(this.webpackJsonpAdministration=this.webpackJsonpAdministration||[]).push([[519],{glHS:function(s,l,n){"use strict";n.r(l);l.default={template:'\n{% block sw_cms_block_image_gallery %}\n<div class="sw-cms-block-image-gallery">\n    <slot name="imageGallery"></slot>\n</div>\n{% endblock %}\n'}}}]);
