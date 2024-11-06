@@ -76,6 +76,14 @@ class ViteFileAccessorDecorator extends FileAccessor
      */
     private function getFileLocation(string $configName, string $fileType): string
     {
+        if (!isset(self::FILES[$fileType])) {
+            return '';
+        }
+
+        if (!isset($this->configs[$configName]['base'])) {
+            return '.vite/' . self::FILES[$fileType];
+        }
+
         return \sprintf('%s.vite/%s', $this->configs[$configName]['base'], self::FILES[$fileType]);
     }
 }
