@@ -50,7 +50,22 @@ async function createWrapper(customField = customNormalField) {
             global: {
                 provide: {
                     flowBuilderService: {
-                        getActionModalName: () => {},
+                        mapActionType: () => {},
+
+                        getEntityNameByAction: () => 'order',
+
+                        getAvailableEntities: () => {
+                            return [
+                                {
+                                    label: 'Order',
+                                    value: 'order',
+                                },
+                                {
+                                    label: 'Customer',
+                                    value: 'customer',
+                                },
+                            ];
+                        },
                     },
                     repositoryFactory: {
                         create: (entity) => {
@@ -168,29 +183,6 @@ async function createWrapper(customField = customNormalField) {
 }
 
 describe('module/sw-flow/component/sw-flow-set-entity-custom-field-modal', () => {
-    beforeAll(() => {
-        Shopware.Service().register('flowBuilderService', () => {
-            return {
-                mapActionType: () => {},
-
-                getEntityNameByAction: () => 'order',
-
-                getAvailableEntities: () => {
-                    return [
-                        {
-                            label: 'Order',
-                            value: 'order',
-                        },
-                        {
-                            label: 'Customer',
-                            value: 'customer',
-                        },
-                    ];
-                },
-            };
-        });
-    });
-
     Shopware.State.registerModule('swFlowState', {
         ...flowState,
         state: {

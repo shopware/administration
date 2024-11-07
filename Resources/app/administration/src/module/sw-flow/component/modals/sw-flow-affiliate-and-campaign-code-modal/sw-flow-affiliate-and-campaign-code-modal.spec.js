@@ -5,27 +5,6 @@ import flowState from 'src/module/sw-flow/state/flow.state';
  * @package services-settings
  */
 
-Shopware.Service().register('flowBuilderService', () => {
-    return {
-        mapActionType: () => {},
-
-        getEntityNameByAction: () => 'customer',
-
-        getAvailableEntities: () => {
-            return [
-                {
-                    label: 'Order',
-                    value: 'order',
-                },
-                {
-                    label: 'Customer',
-                    value: 'customer',
-                },
-            ];
-        },
-    };
-});
-
 Shopware.State.registerModule('swFlowState', {
     ...flowState,
     state: {
@@ -72,6 +51,24 @@ async function createWrapper() {
                             return {
                                 search: () => Promise.resolve(),
                             };
+                        },
+                    },
+                    flowBuilderService: {
+                        mapActionType: () => {},
+
+                        getEntityNameByAction: () => 'customer',
+
+                        getAvailableEntities: () => {
+                            return [
+                                {
+                                    label: 'Order',
+                                    value: 'order',
+                                },
+                                {
+                                    label: 'Customer',
+                                    value: 'customer',
+                                },
+                            ];
                         },
                     },
                 },
