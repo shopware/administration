@@ -224,6 +224,18 @@ export default {
                     state.originAvailableActions.push(action.name);
                 }
 
+                const actionType = Service('flowBuilderService').mapActionType(action.name);
+
+                if (actionType) {
+                    const duplicateAction = availableAction.find(
+                        (option) => Service('flowBuilderService').mapActionType(option) === actionType,
+                    );
+
+                    if (duplicateAction !== undefined) {
+                        return;
+                    }
+                }
+
                 availableAction.push(action.name);
             });
 
