@@ -13,6 +13,8 @@ export default {
 
     compatConfig: Shopware.compatConfig,
 
+    inject: ['flowBuilderService'],
+
     emits: [
         'process-finish',
         'modal-close',
@@ -59,7 +61,7 @@ export default {
             const allowedAware = this.triggerEvent.aware ?? [];
             const properties = [];
             // eslint-disable-next-line max-len
-            return Service('flowBuilderService').getAvailableEntities(
+            return this.flowBuilderService.getAvailableEntities(
                 this.action,
                 this.triggerActions,
                 allowedAware,
@@ -87,7 +89,7 @@ export default {
 
     methods: {
         createdComponent() {
-            const entityName = Service('flowBuilderService').getEntityNameByAction(this.action);
+            const entityName = this.flowBuilderService.getEntityNameByAction(this.action);
 
             if (this.entityOptions.length) {
                 this.entity =
