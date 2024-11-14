@@ -24,16 +24,16 @@
     {%- endif -%}
 
     <g:price>{{ price.unitPrice|number_format(context.currency.itemRounding.decimals, '.', '') }} {{ context.currency.isoCode }}</g:price>
-    <g:brand>{{ product.manufacturer.translated.name|escape ?? '' }}</g:brand>
+    <g:brand>{{ product.manufacturer.translated.name|escape ? product.manufacturer.translated.name|escape : '' }}</g:brand>
     <g:gtin>{{ product.ean }}</g:gtin>
     <g:mpn>{{ product.manufacturerNumber }}</g:mpn>
     <g:shipping>
         <g:country>DE</g:country>
         <g:service>Standard</g:service>
         {% if product.shippingFree  %}
-        <g:price>0.00 {{ context.currency.isoCode }}</g:price>
+            <g:price>0.00 {{ context.currency.isoCode }}</g:price>
         {% else %}
-        <g:price>4.95 {{ context.currency.isoCode }}{# change your default delivery costs #}</g:price>
+            <g:price>4.95 {{ context.currency.isoCode }}{# change your default delivery costs #}</g:price>
         {% endif %}
     </g:shipping>
 </item>
