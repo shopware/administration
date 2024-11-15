@@ -80,7 +80,6 @@ const missingTests = [
     'src/app/component/rule/sw-condition-base-line-item/index.js',
     'src/app/component/rule/sw-condition-is-net-select/index.js',
     'src/app/component/rule/sw-condition-modal/index.js',
-    'src/app/component/sidebar/sw-sidebar/index.js',
     'src/app/component/sidebar/sw-sidebar-item/index.js',
     'src/app/component/sidebar/sw-sidebar-navigation-item/index.js',
     'src/app/component/structure/sw-admin-menu/_sw-admin-menu-item/catalogues.js',
