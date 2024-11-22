@@ -121,7 +121,6 @@ const missingTests = [
     'src/app/init/directive.init.ts',
     'src/app/init/index.ts',
     'src/app/init/login.init.js',
-    'src/app/init/window.init.ts',
     'src/app/mixin/index.js',
     'src/app/plugin/device-helper.plugin.js',
     'src/app/plugin/index.ts',
