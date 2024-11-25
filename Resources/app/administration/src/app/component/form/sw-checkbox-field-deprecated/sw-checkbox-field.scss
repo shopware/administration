@@ -61,6 +61,11 @@ $sw-field-color-inherited: $color-module-purple-900;
             cursor: pointer;
             z-index: 2;
 
+            &:focus-visible {
+                outline: revert;
+                opacity: 1;
+            }
+
             &:disabled {
                 cursor: not-allowed;
             }
