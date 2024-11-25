@@ -237,7 +237,9 @@
       "labelColumnHide": "Spalte ausblenden",
       "labelSelectionCount": "Ausgewählt:",
       "labelDeSelectAll": "Alle abwählen",
-      "maximumSelectionExceed": "Maximale Anzahl Einträge ausgewählt"
+      "maximumSelectionExceed": "Maximale Anzahl Einträge ausgewählt",
+      "columnsActions": "Spaltenaktionen",
+      "actionsMenu": "Aktionen-Menü öffnen"
     },
     "sw-pagination": {
       "labelItemsPerPage": "Einträge pro Seite:"
@@ -448,6 +450,7 @@
       "caption": "Dateien zum Hochladen hierhin ziehen"
     },
     "sw-media-upload-v2": {
+      "switchMode": "Wechseln Sie den Upload-Modus",
       "buttonFileUpload": "Dateien hochladen",
       "buttonFilesUpload": "Dateien hochladen",
       "buttonUrlUpload": "Über URL hochladen",
@@ -1627,5 +1630,8 @@
     "datetime": {
       "placeholder": "Datum und Zeit auswählen ..."
     }
+  },
+  "sw-context-button": {
+    "ariaLabel": "Kontextmenü öffnen"
   }
 }

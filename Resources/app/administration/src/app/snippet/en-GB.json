@@ -237,7 +237,9 @@
       "labelColumnHide": "Hide column",
       "labelSelectionCount": "Selected:",
       "labelDeSelectAll": "Deselect all",
-      "maximumSelectionExceed": "Maximum amount of items selected"
+      "maximumSelectionExceed": "Maximum amount of items selected",
+      "columnsActions": "Column actions",
+      "actionsMenu": "Open actions menu"
     },
     "sw-pagination": {
       "labelItemsPerPage": "Items per page:"
@@ -448,6 +450,7 @@
       "caption": "Drag files here to upload"
     },
     "sw-media-upload-v2": {
+      "switchMode": "Switch upload mode",
       "buttonFileUpload": "Upload file",
       "buttonFilesUpload": "Upload files",
       "buttonUrlUpload": "Upload file from URL",
@@ -1627,5 +1630,8 @@
     "datetime": {
       "placeholder": "Select date and time..."
     }
+  },
+  "sw-context-button": {
+    "ariaLabel": "Open context menu"
   }
 }

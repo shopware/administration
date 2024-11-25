@@ -157,6 +157,7 @@
                             <sw-context-button
                                 v-if="allowColumnEdit && !isInlineEditActive"
                                 class="sw-data-grid__action-edit-column"
+                                aria-label="global.sw-data-grid.columnsActions"
                             >
                                 <!-- eslint-disable-next-line sw-deprecation-rules/no-twigjs-blocks -->
                                 {% block sw_data_grid_column_actions_hide %}
@@ -484,6 +485,7 @@
                             <sw-context-button
                                 v-else
                                 class="sw-data-grid__actions-menu"
+                                aria-label="global.sw-data-grid.actionsMenu"
                             >
                                 <slot
                                     name="actions"

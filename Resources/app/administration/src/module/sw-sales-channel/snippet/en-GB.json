@@ -9,7 +9,8 @@
       "tooltipOpenStorefront": "Open storefront",
       "titleMenuItems": "Sales Channels",
       "titleMenuMoreItems": "More",
-      "manageSalesChannels": "Manage Sales Channels"
+      "manageSalesChannels": "Manage Sales Channels",
+      "addSalesChannel": "Add Sales Channel"
     },
     "list": {
       "title": "Sales Channels",

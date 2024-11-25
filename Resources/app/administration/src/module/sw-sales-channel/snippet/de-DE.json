@@ -9,7 +9,8 @@
       "titleMenuItems": "Verkaufskanäle",
       "tooltipOpenStorefront": "Öffne Storefront",
       "titleMenuMoreItems": "Mehr",
-      "manageSalesChannels": "Verkaufskanäle verwalten"
+      "manageSalesChannels": "Verkaufskanäle verwalten",
+      "addSalesChannel": "Verkaufskanal hinzufügen"
     },
     "list": {
       "title": "Verkaufskanäle",
