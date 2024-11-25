@@ -138,6 +138,7 @@ export default {
             criteria.getAssociation('options').addAssociation('group');
             criteria.addAssociation('cover');
             criteria.addAssociation('media');
+            criteria.addAssociation('tax');
 
             if (this.searchTerm) {
                 // Split each word for search
