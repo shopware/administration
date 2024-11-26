@@ -70,7 +70,8 @@
         "titleTestMail": "Test-Mail senden",
         "titleShowPreview": "Vorschau anzeigen",
         "titleShowAvailableVariables": "Variablen",
-        "copyTooltip": "In die Zwischenablage kopieren."
+        "copyTooltip": "In die Zwischenablage kopieren.",
+        "languageNotAssignedToSalesChannel": "Die aktuelle Sprache ist nicht dem gewählten Verkaufskanal zugewiesen."
       },
       "previewModalTitle": "Vorschau",
       "buttonCancel": "Abbrechen",

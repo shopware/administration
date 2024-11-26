@@ -70,7 +70,8 @@
         "titleTestMail": "Send test email",
         "titleShowPreview": "Show preview",
         "titleShowAvailableVariables": "Variables",
-        "copyTooltip": "Copy to clipboard."
+        "copyTooltip": "Copy to clipboard.",
+        "languageNotAssignedToSalesChannel": "The current language is not assigned to the selected sales channel."
       },
       "previewModalTitle": "Preview",
       "buttonCancel": "Cancel",
