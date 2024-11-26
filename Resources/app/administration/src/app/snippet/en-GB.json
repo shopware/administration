@@ -201,7 +201,8 @@
     },
     "sw-price-field": {
       "labelPriceGross": "Price (gross)",
-      "labelPriceNet": "Price (net)"
+      "labelPriceNet": "Price (net)",
+      "toggleLinkedCurrency": "Toggle link between gross and net price"
     },
     "sw-list-price-field": {
       "labelListPriceGross": "List price (gross)",

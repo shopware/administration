@@ -201,7 +201,8 @@
     },
     "sw-price-field": {
       "labelPriceGross": "Preis (Brutto)",
-      "labelPriceNet": "Preis (Netto)"
+      "labelPriceNet": "Preis (Netto)",
+      "toggleLinkedCurrency": "Verknüpfung von Brutto- und Nettopreis umschalten"
     },
     "sw-list-price-field": {
       "labelListPriceGross": "Streichpreis (Brutto)",
