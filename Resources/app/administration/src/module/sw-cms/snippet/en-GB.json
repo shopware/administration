@@ -432,7 +432,7 @@
             "autoPlay": "Play video automatically",
             "loop": "Play video in a loop",
             "showControls": "Show video controls",
-            "controlsColor": "Change video player controls' color",
+            "controlsColor": "Change video player controls' colour",
             "byLine": "Show video creator",
             "showPortrait": "Show picture of the creator",
             "showTitle": "Show video title",
