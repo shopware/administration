@@ -529,6 +529,9 @@
     "sw-select": {
       "messageNoResults": "No results found for \"{term}\"."
     },
+    "sw-select-base": {
+      "buttonClear": "Clear all elements"
+    },
     "sw-select-result-list": {
       "messageNoResults": "No results found."
     },
