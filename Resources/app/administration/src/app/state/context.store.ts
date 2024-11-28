@@ -32,6 +32,7 @@ interface ContextState {
             };
             version: null | string;
             versionRevision: null | string;
+            inAppPurchases: Record<string, string[]>;
         };
         environment: null | 'development' | 'production' | 'testing';
         fallbackLocale: null | string;
@@ -75,6 +76,7 @@ const ContextStore: Module<ContextState, VuexRootState> = {
                 bundles: null,
                 version: null,
                 versionRevision: null,
+                inAppPurchases: {},
             },
             environment: null,
             fallbackLocale: null,
