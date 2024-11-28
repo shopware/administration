@@ -93,6 +93,7 @@
                             {% block sw_data_grid_select_all_checkbox %}
                             <sw-checkbox-field
                                 v-if="records && records.length > 0"
+                                :aria-label="$tc(allSelectedChecked ? 'global.sw-data-grid.labelDeSelectAll' : 'global.sw-data-grid.labelSelectAll')"
                                 :disabled="isSelectAllDisabled"
                                 class="sw-data-grid__select-all"
                                 :value="allSelectedChecked"
@@ -317,6 +318,7 @@
                                 <!-- eslint-disable-next-line sw-deprecation-rules/no-twigjs-blocks -->
                                 {% block sw_data_grid_select_item_checkbox %}
                                 <sw-checkbox-field
+                                    :aria-label="$tc('global.sw-data-grid.labelSelected')"
                                     :disabled="!isRecordSelectable(item)"
                                     :value="isSelected(item[itemIdentifierProperty])"
                                     @update:value="selectItem($event, item)"
