@@ -1269,6 +1269,14 @@
       "textDeleteChildrenConfirm": "Alle unterliegenden Kategorien werden auch gelöscht."
     }
   },
+  "sw-tree-item": {
+    "toggleTreeItem": "Baumstruktur umschalten \"{name}\"",
+    "toggleItem": "\"{name}\" Checkbox umschalten ",
+    "childrenLabel": "Unterelemente für \"{name}\""
+  },
+  "sw-sidebar-collapse": {
+    "collapseIndicator": "Seitenleiste verbergen"
+  },
   "sw-category-tree-field": {
     "emptySearchResults": "Keine Kategorien gefunden."
   },
