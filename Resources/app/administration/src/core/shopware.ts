@@ -47,6 +47,7 @@ import Store from 'src/app/store';
 import { createExtendableSetup, overrideComponentSetup } from 'src/app/adapter/composition-extension-system';
 import * as Vue from 'vue';
 import type { DefineComponent, Ref } from 'vue';
+import InAppPurchase from './in-app-purchase';
 import ExtensionApi from './extension-api';
 
 /** Initialize feature flags at the beginning */
@@ -206,6 +207,8 @@ class ShopwareClass implements CustomShopwareProperties {
 
     public Feature = Feature;
 
+    public InAppPurchase = InAppPurchase;
+
     public Vue = Vue;
 
     public ApiService = {
@@ -345,6 +348,9 @@ class ShopwareClass implements CustomShopwareProperties {
 }
 
 const ShopwareInstance = new ShopwareClass();
+
+// Freeze InAppPurchase to prevent modifications
+Object.defineProperty(ShopwareInstance, 'InAppPurchase', { configurable: false, writable: false });
 
 // Only works for webpack order of imports
 if (!window._features_.ADMIN_VITE) {
