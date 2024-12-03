@@ -103,7 +103,7 @@
                 <sw-card
                     position-identifier="sw-settings-snippet-detail-snippets"
                     :title="$tc('sw-settings-snippet.detail.cardSnippetSetsTitle')"
-                    :is-loading="isLoading"
+                    :is-loading="isLoading || isLoadingSnippets"
                 >
                     <div class="snippet-overview-card">
                         <!-- eslint-disable-next-line sw-deprecation-rules/no-twigjs-blocks -->
