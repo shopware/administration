@@ -1183,6 +1183,9 @@
         "linkText": "Supportanfrage erstellen",
         "linkUrl": "https://account.shopware.com/shops/support"
       }
+    },
+    "sw-page": {
+      "backButton": "Zurückgehen"
     }
   },
   "sw-text-editor-toolbar": {
