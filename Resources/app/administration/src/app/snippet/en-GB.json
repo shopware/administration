@@ -243,7 +243,10 @@
       "actionsMenu": "Open actions menu"
     },
     "sw-pagination": {
-      "labelItemsPerPage": "Items per page:"
+      "labelItemsPerPage": "Items per page:",
+      "previousPage": "Go to previous page",
+      "nextPage": "Go to next page",
+      "page": "Go to page {page}"
     },
     "sw-modal": {
       "labelClose": "Close"
