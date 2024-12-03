@@ -72,7 +72,7 @@ class AdminExtensionApiController extends AbstractController
 
         $action = new AppAction(
             $app,
-            $this->appPayloadServiceHelper->buildSource($app->getVersion(), $app->getId()),
+            $this->appPayloadServiceHelper->buildSource($app->getVersion(), $app->getName()),
             $targetUrl,
             $requestDataBag->getString('entity'),
             $requestDataBag->getString('action'),
