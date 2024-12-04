@@ -1269,6 +1269,14 @@
       "textDeleteChildrenConfirm": "All subcategories will be deleted too."
     }
   },
+  "sw-tree-item": {
+    "toggleTreeItem": "Toggle tree item \"{name}\"",
+    "toggleItem": "Toggle item \"{name}\"",
+    "childrenLabel": "Subitems for \"{name}\""
+  },
+  "sw-sidebar-collapse": {
+    "collapseIndicator": "Collapse sidebar"
+  },
   "sw-category-tree-field": {
     "emptySearchResults": "No categories found."
   },
