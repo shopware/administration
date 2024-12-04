@@ -209,7 +209,7 @@
             "displayModeCover": "Zugeschnitten",
             "displayModeStretch": "Skaliert",
             "displayModeContain": "Feste Höhe",
-            "autoSlide": "Automatischer Wechsel",
+            "autoSlide": "Automatischer Bildwechsel",
             "autoplayTimeout": "Verzögerung",
             "speed": "Animationsverzögerung",
             "horizontalAlign": "Horizontale Ausrichtung",
@@ -279,11 +279,11 @@
         "label": "Bild-Slider",
         "config": {
           "label": {
-            "navigationArrows": "Pfeile-Navigation",
+            "navigationArrows": "Pfeil-Navigation",
             "navigationPositionNone": "Keine",
             "navigationPositionInside": "Innen",
             "navigationPositionOutside": "Außen",
-            "navigationDots": "Punkte-Navigation"
+            "navigationDots": "Punkt-Navigation"
           },
           "helpText": {
             "displayMode": "<strong>Original:</strong> Die Bilder werden ohne Höhenbeschränkungen auf die Breite der CMS-Seite skaliert. Der Slider passt seine Höhe dynamisch an.<br><br><strong>Feste Höhe:</strong> Die Bilder werden ohne Höhenbeschränkungen auf die Breite der CMS-Seite skaliert. Der Slider behält die Höhe des höchsten Bildes bei.<br><br><strong>Zugeschnitten:</strong> Die Bilder werden auf die aktuelle Breite der CMS-Seite skaliert. Jeglicher vertikaler Überlauf wird auf die konfigurierte Höhe zugeschnitten."
@@ -362,9 +362,12 @@
             "title": "Slider-Titel",
             "selection": "Produkte",
             "navigation": "Navigation",
-            "rotate": "Automatischer Wechsel",
             "border": "Rahmen",
-            "minWidth": "Minimale Weite",
+            "minWidth": "Minimale Breite",
+            "navigationArrows": "Pfeil-Navigation",
+            "navigationPositionNone": "Keine",
+            "navigationPositionInside": "Innen",
+            "navigationPositionOutside": "Außen",
             "productAssignmentType": "Produkt-Zuweisung",
             "productStreamSorting": "Sortierung",
             "productStreamLimit": "Maximale Produktanzahl",
@@ -376,6 +379,10 @@
             "minWidth": "Minimale Breite",
             "productStreamChoice": "Wähle eine dynamische Produktgruppe ...",
             "productStreamSorting": "Wähle eine Sortierung ..."
+          },
+          "helpText": {
+            "minWidth": "Gib die minimale Breite in der gewünschten Einheit an. Zum Beispiel: 200px",
+            "displayMode": "<strong>Original:</strong> Die Bilder werden auf Höhe oder Breite der Produktbox skaliert, so dass die Bilder immer komplett in den für sie vorgesehenen Bereich passen. Die Bilder werden nie hochskaliert.<br><br><strong>Feste Höhe:</strong> Die Bilder werden auf Höhe oder Breite der Produktbox skaliert, so dass die Bilder immer komplett in den für sie vorgesehenen Bereich passen. Die Bilder können hochskaliert werden.<br><br><strong>Zugeschnitten:</strong> Die Bilder werden auf die Höhe oder Breite der Produktbox skaliert. Jeglicher Überlauf wird entsprechend zugeschnitten."
           },
           "productAssignmentTypeOptions": {
             "manual": "Manuelle Zuweisung",

@@ -212,7 +212,7 @@
             "displayModeCover": "Cropped",
             "displayModeStretch": "Scaled",
             "displayModeContain": "Fixed height",
-            "autoSlide": "Auto slide",
+            "autoSlide": "Automatic image transition",
             "autoplayTimeout": "Delay",
             "speed": "Animation delay",
             "horizontalAlign": "Horizontal align",
@@ -221,7 +221,7 @@
             "horizontalAlignRight": "Right"
           },
           "helpText": {
-            "autoSlide": "The slide will be slided automatically.",
+            "autoSlide": "The images transition automatically.",
             "autoplayTimeout": "The millisecond duration for how long the slide should stay still.",
             "speed": "The millisecond duration of the sliding animation.",
             "displayMode": "<strong>Original:</strong> The image is displayed in its original resolution or shrunk down to current CMS page's width.<br><br><strong>Scaled:</strong> The image is scaled to the CMS page's width without any height restrictions.<br><br><strong>Cropped:</strong> The image is scaled to the current CMS page's width. Any vertical overflow is cropped to the configured maximum height."
@@ -362,9 +362,12 @@
             "title": "Slider title",
             "selection": "Products",
             "navigation": "Navigation",
-            "rotate": "Automatic sliding",
             "border": "Border",
             "minWidth": "Minimal width",
+            "navigationArrows": "Arrow navigation",
+            "navigationPositionNone": "None",
+            "navigationPositionInside": "Inside",
+            "navigationPositionOutside": "Outside",
             "productAssignmentType": "Product assignment",
             "productStreamSorting": "Sorting",
             "productStreamLimit": "Maximum number of products",
@@ -376,6 +379,10 @@
             "minWidth": "Minimal width",
             "productStreamChoice": "Select a dynamic product group",
             "productStreamSorting": "Select a sorting..."
+          },
+          "helpText": {
+            "minWidth": "Enter the minimum width with your desired unit. For example: 200px",
+            "displayMode": "<strong>Original:</strong> The images are scaled to the height or width of the product box, so that they always fit into their designated area. The images are never scaled up.<br><br><strong>Fixed height:</strong> The images are scaled to the height or width of the product box, so that they always fit into their designated area. The images can be scaled up.<br><br><strong>Cropped:</strong> The images are scaled to the height or width of the product box. Any overflow is cropped."
           },
           "productAssignmentTypeOptions": {
             "manual": "Manual assignment",
