@@ -447,10 +447,12 @@
             "start": "Start video at",
             "end": "End video at",
             "needsConfirmation": "Load video only after confirmation by the user",
-            "previewImage": "Preview image"
+            "previewImage": "Preview image",
+            "videoTitle" : "Video title"
           },
           "placeholder": {
-            "videoId": "Enter a video link..."
+            "videoId": "Enter a video link...",
+            "videoTitle": "Enter a descriptive title..."
           },
           "helpText": {
             "autoPlay": "Some browser prevent videos from starting automatically.",
