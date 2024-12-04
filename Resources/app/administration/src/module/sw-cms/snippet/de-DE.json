@@ -447,10 +447,12 @@
             "start": "Video starten ab",
             "end": "Video abspielen bis",
             "needsConfirmation": "Video erst nach Bestätigung durch den User laden",
-            "previewImage": "Vorschau-Bild"
+            "previewImage": "Vorschau-Bild",
+            "videoTitle" : "Videotitel"
           },
           "placeholder": {
-            "videoId": "Video-Link eingeben ..."
+            "videoId": "Video-Link eingeben ...",
+            "videoTitle": "Einen beschreibenden Titel eingeben ..."
           },
           "helpText": {
             "autoPlay": "Achtung, einige Browser verhindern das automatische Abspielen von Videos.",
