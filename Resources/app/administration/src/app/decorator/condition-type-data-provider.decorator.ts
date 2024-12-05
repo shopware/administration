@@ -589,6 +589,13 @@ Application.addServiceProviderDecorator('ruleConditionDataProviderService', (rul
         group: 'order',
     });
 
+    ruleConditionService.addCondition('adminSalesChannelSource', {
+        component: 'sw-condition-generic',
+        label: 'global.sw-condition.condition.adminSalesChannelSourceRule',
+        scopes: ['checkout'],
+        group: 'order',
+    });
+
     ruleConditionService.addCondition('orderTransactionStatus', {
         component: 'sw-condition-generic',
         label: 'global.sw-condition.condition.orderTransactionStatusRule',

@@ -721,7 +721,8 @@
         "orderTagRule": "Bestellung mit Tag",
         "orderTrackingCodeRule": "Sendungsnummer",
         "orderDeliveryStatusRule": "Lieferstatus",
-        "orderCreatedByAdminRule": "Bestellung vom Administrator erstellt",
+        "orderCreatedByAdminRule": "Bestellung vom Administrator erstellt (Flow)",
+        "adminSalesChannelSourceRule": "In Administration verwendbar",
         "orderTransactionStatusRule": "Zahlungsstatus",
         "orderStatusRule": "Bestellstatus",
         "orderCustomFieldRule": "Bestellung mit Zusatzfeld",
@@ -966,6 +967,11 @@
       "orderCreatedByAdmin": {
         "shouldOrderBeCreatedByAdmin": {
           "placeholder": "Condition auswählen ..."
+        }
+      },
+      "adminSalesChannelSource": {
+        "hasAdminSalesChannelSource": {
+          "placeholder": "Bedingung auswählen ..."
         }
       },
       "orderTransactionStatus": {

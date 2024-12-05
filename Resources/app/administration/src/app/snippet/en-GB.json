@@ -721,7 +721,8 @@
         "orderTagRule": "Order with tag",
         "orderTrackingCodeRule": "Tracking code",
         "orderDeliveryStatusRule": "Delivery status",
-        "orderCreatedByAdminRule": "Order created by admin",
+        "orderCreatedByAdminRule": "Order created by administrator (flow)",
+        "adminSalesChannelSourceRule": "Applicable in Administration",
         "orderTransactionStatusRule": "Payment status",
         "orderStatusRule": "Order status",
         "orderCustomFieldRule": "Order with custom field",
@@ -965,23 +966,28 @@
       },
       "orderCreatedByAdmin": {
         "shouldOrderBeCreatedByAdmin": {
-          "placeholder": "Select condition ..."
+          "placeholder": "Select condition..."
+        }
+      },
+      "adminSalesChannelSource": {
+        "hasAdminSalesChannelSource": {
+          "placeholder": "Select condition..."
         }
       },
       "orderTransactionStatus": {
         "stateIds": {
-          "placeholder": "Select state ..."
+          "placeholder": "Select state..."
         },
         "operator": {
-          "placeholder": "Select operator ..."
+          "placeholder": "Select operator..."
         }
       },
       "orderStatus": {
         "stateIds": {
-          "placeholder": "Select state ..."
+          "placeholder": "Select state..."
         },
         "operator": {
-          "placeholder": "Select operator ..."
+          "placeholder": "Select operator..."
         }
       }
     },
