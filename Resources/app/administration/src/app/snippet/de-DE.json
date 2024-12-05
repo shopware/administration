@@ -240,7 +240,9 @@
       "labelDeSelectAll": "Alle abwählen",
       "maximumSelectionExceed": "Maximale Anzahl Einträge ausgewählt",
       "columnsActions": "Spaltenaktionen",
-      "actionsMenu": "Aktionsmenü öffnen"
+      "actionsMenu": "Aktionsmenü öffnen",
+      "labelSelectAll": "Alles auswählen",
+      "labelSelected": "Ausgewählt"
     },
     "sw-pagination": {
       "labelItemsPerPage": "Einträge pro Seite:",
