@@ -19,6 +19,7 @@ async function createWrapper(isLoggedIn, forwardLogout = () => {}, route = 'sw.w
                 'sw-in-app-purchase-checkout': true,
                 'sw-app-wrong-app-url-modal': true,
                 'router-view': true,
+                'sw-skip-link': true,
             },
             mocks: {
                 $router: {

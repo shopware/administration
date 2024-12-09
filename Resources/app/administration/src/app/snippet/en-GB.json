@@ -61,6 +61,9 @@
     "sw-desktop": {
       "stagingBarText": "The Shop is in staging mode."
     },
+    "sw-skip-link": {
+      "label": "Skip to content"
+    },
     "notification-center": {
       "title": "Notifications",
       "emptyText": "Nothing going on lately.",
@@ -150,6 +153,7 @@
       "textProjectName": "Administration",
       "administrator": "Administrator",
       "navigation": {
+        "label": "Main navigation",
         "mainMenuItemCatalogue": "Catalogues",
         "mainMenuItemContent": "Content",
         "mainMenuItemMarketing": "Marketing"

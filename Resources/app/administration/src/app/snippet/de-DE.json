@@ -61,6 +61,9 @@
     "sw-desktop": {
       "stagingBarText": "Der Shop befindet sich im Staging-Modus."
     },
+    "sw-skip-link": {
+      "label": "Navigation überspringen"
+    },
     "notification-center": {
       "title": "Mitteilungen",
       "emptyText": "Nicht viel los hier.",
@@ -150,6 +153,7 @@
       "textProjectName": "Administration",
       "administrator": "Administrator",
       "navigation": {
+        "label": "Hauptnavigation",
         "mainMenuItemCatalogue": "Kataloge",
         "mainMenuItemContent": "Inhalte",
         "mainMenuItemMarketing": "Marketing"
