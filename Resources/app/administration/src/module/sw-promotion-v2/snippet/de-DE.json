@@ -16,7 +16,8 @@
             "descriptionEmpty": "Steigere Deinen Umsatz durch Rabatte auf Deine Produkte und Leistungen.",
             "placeholderSearchBar": "Durchsuche alle Rabattaktionen ...",
             "textDeleteConfirm": "Möchtest Du die Rabattaktion \"{name}\" wirklich löschen?",
-            "titleSidebarItemRefresh": "Aktualisieren"
+            "titleSidebarItemRefresh": "Aktualisieren",
+            "duplicatePromotionInfo": "Aktionscodes werden nicht dupliziert und müssen neu generiert werden."
         },
         "detail": {
             "header": {
