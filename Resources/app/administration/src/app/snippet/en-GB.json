@@ -170,6 +170,9 @@
         "emptyMessageNoSearchResults": "No products found for \"{term}\""
       }
     },
+    "accessibility": {
+      "optionWarning": "In the interest of accessibility, it is not recommended to activate this option."
+    },
     "sw-field": {
       "notification": {
         "notificationCopySuccessMessage": "Text has been copied to clipboard.",
