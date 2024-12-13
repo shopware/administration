@@ -170,6 +170,9 @@
         "emptyMessageNoSearchResults": "Keine Produkte gefunden für \"{term}\""
       }
     },
+    "accessibility": {
+      "optionWarning": "Im Interesse der Barrierefreiheit ist es nicht empfehlenswert, diese Option zu aktivieren."
+    },
     "sw-field": {
       "notification": {
         "notificationCopySuccessMessage": "Der Text wurde in die Zwischenablage kopiert.",
