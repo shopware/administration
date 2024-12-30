@@ -1,0 +1,1 @@
+"use strict";(window.webpackJsonpAdministration=window.webpackJsonpAdministration||[]).push([[89141],{289141:function(t,e,i){i.r(e),e.default={data(){return{propertyNames:{label:this.$tc("sw-settings-custom-field.customField.detail.labelLabel"),placeholder:this.$tc("sw-settings-custom-field.customField.detail.labelPlaceholder")}}}}}}]);
