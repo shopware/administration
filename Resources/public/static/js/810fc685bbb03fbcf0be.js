@@ -1,0 +1,1 @@
+(this.webpackJsonpAdministration=this.webpackJsonpAdministration||[]).push([[525],{"4ySo":function(o,n,s){"use strict";s.r(n);n.default={template:'\n{% block sw_cms_block_vimeo_video %}\n<div class="sw-cms-block-vimeo-video">\n    <slot name="video">\n        \n        {% block sw_cms_block_vimeo_video_slot %}{% endblock %}\n    </slot>\n</div>\n{% endblock %}\n'}}}]);
