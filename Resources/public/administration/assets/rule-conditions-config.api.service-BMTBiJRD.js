@@ -1,0 +1,2 @@
+import{A as i}from"./api.service-DdtDqyz_.js";import"./channel-B1e7pKFZ.js";class s extends i{constructor(e,o){super(e,o,null,"application/json"),this.name="ruleConditionsConfigApiService"}load(){return Shopware.Store.get("ruleConditionsConfig").config!==null?Promise.resolve():this.httpClient.get("_info/rule-config",{headers:this.getBasicHeaders()}).then(e=>{Shopware.Store.get("ruleConditionsConfig").config=i.handleResponse(e)})}}export{s as default};
+//# sourceMappingURL=rule-conditions-config.api.service-BMTBiJRD.js.map

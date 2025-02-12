@@ -1,0 +1,2 @@
+const t={template:"",watch:{value:{handler(){this.$refs.textEditor&&this.value&&(this.isEmpty=this.emptyCheck(this.content),this.placeholderVisible=this.isEmpty,this.$nextTick(()=>{this.setWordCount(),this.setTablesResizable()}))}}}};export{t as default};
+//# sourceMappingURL=index-1zuITKmm.js.map

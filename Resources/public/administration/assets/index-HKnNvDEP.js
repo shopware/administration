@@ -1,0 +1,2 @@
+const e={methods:{saveFinish(){this.isSaveSuccessful=!1,this.$router.push({name:"sw.settings.delivery.time.detail",params:{id:this.deliveryTime.id}})},createdComponent(){Shopware.Store.get("context").resetLanguageToDefault(),this.deliveryTime=this.deliveryTimeRepository.create()}}};export{e as default};
+//# sourceMappingURL=index-HKnNvDEP.js.map

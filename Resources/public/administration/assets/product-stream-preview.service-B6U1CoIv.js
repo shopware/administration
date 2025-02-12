@@ -1,0 +1,2 @@
+import{b7 as p}from"./channel-B1e7pKFZ.js";import{A as t}from"./api.service-DdtDqyz_.js";class m extends t{constructor(e,r){super(e,r,null,"application/json"),this.name="productStreamPreviewService"}preview(e,r,s,i={}){const a=p(r.parse(),{filter:s});return this.httpClient.post(`_admin/product-stream-preview/${e}`,a,{headers:this.getBasicHeaders(i)}).then(o=>t.handleResponse(o))}}export{m as default};
+//# sourceMappingURL=product-stream-preview.service-B6U1CoIv.js.map

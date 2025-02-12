@@ -1,0 +1,2 @@
+import{A as s}from"./api.service-DdtDqyz_.js";import"./channel-B1e7pKFZ.js";class o extends s{constructor(t,e){super(t,e,null,"application/json"),this.name="notificationsService"}fetchNotifications(t,e=null){return this.httpClient.get("notification/message",{params:{limit:t,latestTimestamp:e},headers:this.getBasicHeaders()}).then(({data:i})=>i)}}export{o as default};
+//# sourceMappingURL=notifications.service-D7UtqwQl.js.map

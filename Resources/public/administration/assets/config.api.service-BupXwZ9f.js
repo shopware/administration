@@ -1,0 +1,2 @@
+import{A as s}from"./api.service-DdtDqyz_.js";import"./channel-B1e7pKFZ.js";class f extends s{constructor(e,i,t="config"){super(e,i,t),this.name="configService"}getConfig(e={},i={}){const t=e,n=this.getBasicHeaders(i);return new Promise(o=>{this.httpClient.get("/_info/config",{params:t,headers:n}).then(r=>{o(s.handleResponse(r))})})}}export{f as default};
+//# sourceMappingURL=config.api.service-BupXwZ9f.js.map

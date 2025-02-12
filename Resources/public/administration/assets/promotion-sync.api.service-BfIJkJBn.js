@@ -1,0 +1,2 @@
+import o from"./sync.api.service-BBmqzIz-.js";import"./api.service-DdtDqyz_.js";import"./channel-B1e7pKFZ.js";class c extends o{constructor(t,e,r="sync"){super(t,e,r),this.name="promotionSyncService"}async loadPackagers(){return this.httpClient.get("/_action/promotion/setgroup/packager",{headers:this.getBasicHeaders()}).then(t=>t.data)}async loadSorters(){return this.httpClient.get("/_action/promotion/setgroup/sorter",{headers:this.getBasicHeaders()}).then(t=>t.data)}}export{c as default};
+//# sourceMappingURL=promotion-sync.api.service-BfIJkJBn.js.map

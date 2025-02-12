@@ -1,0 +1,2 @@
+const c='{% block sw_cms_block_product_description_reviews %} <div class="sw-cms-block-product-description-reviews"> <slot name="content"> {% block sw_cms_block_product_description_reviews_slot_content %}{% endblock %} </slot> </div> {% endblock %}',o={template:c};export{o as default};
+//# sourceMappingURL=index-DcgQUe0n.js.map

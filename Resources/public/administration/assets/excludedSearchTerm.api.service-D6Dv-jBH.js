@@ -1,0 +1,2 @@
+import{A as s}from"./api.service-DdtDqyz_.js";import"./channel-B1e7pKFZ.js";class i extends s{constructor(e,r,t="reset-excluded-search-term"){super(e,r,t),this.name="excludedSearchTermService"}resetExcludedSearchTerm(){const e="/_admin/reset-excluded-search-term",r=this._getHeader();return this.httpClient.post(e,{},{headers:r})}_getHeader(){return{...super.getBasicHeaders(),"sw-language-id":Shopware.Context.api.languageId}}}export{i as default};
+//# sourceMappingURL=excludedSearchTerm.api.service-D6Dv-jBH.js.map

@@ -1,0 +1,2 @@
+const e='{% block sw_cms_block_image_bubble_row %} <div class="sw-cms-block-image-bubble-row"> <slot name="left"></slot> <slot name="center"></slot> <slot name="right"></slot> </div> {% endblock %}',l={template:e};export{l as default};
+//# sourceMappingURL=index-Byjt3C5T.js.map

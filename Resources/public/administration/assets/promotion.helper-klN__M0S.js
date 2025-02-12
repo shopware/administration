@@ -1,0 +1,2 @@
+import{h as s}from"./channel-B1e7pKFZ.js";const n={PERCENTAGE:"percentage",ABSOLUTE:"absolute",FIXED:"fixed",FIXED_UNIT:"fixed_unit"},o={CART:"cart",DELIVERY:"delivery",SET:"set",SETGROUP:"setgroup"},i={isEditingAllowed:r};function r(e){if(e===null||e===void 0)return!1;if(!s(e,"hasOrders"))throw new Error("Promotion Property hasOrders does not exist. Please use the Hydrator before!");return!e.hasOrders}export{n as D,i as P,o as a};
+//# sourceMappingURL=promotion.helper-klN__M0S.js.map

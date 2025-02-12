@@ -1,0 +1,2 @@
+import"./channel-B1e7pKFZ.js";const e="sw-main-hidden",n='{% block sw_hidden_iframes %} <div class="sw-hidden-iframes" style="display: none;" > <sw-iframe-renderer v-for="extension in extensions" :key="`${extension.type}-${extension.name}`" :src="extension.baseUrl" :location-id="MAIN_HIDDEN" /> </div> {% endblock %}',{Component:s}=Shopware;s.register("sw-hidden-iframes",{template:n,computed:{extensions(){return Shopware.Store.get("extensions").privilegedExtensions},MAIN_HIDDEN(){return e}}});
+//# sourceMappingURL=index-B_VuuclZ.js.map

@@ -1,0 +1,2 @@
+const o='{% block sw_cms_block_vimeo_video %} <div class="sw-cms-block-vimeo-video"> <slot name="video"> {% block sw_cms_block_vimeo_video_slot %}{% endblock %} </slot> </div> {% endblock %}',e={template:o};export{e as default};
+//# sourceMappingURL=index-CFMJR62Z.js.map
