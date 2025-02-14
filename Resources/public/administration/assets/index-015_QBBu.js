@@ -1,0 +1,1 @@
+const r={functional:!0,render(t,e){function i(){return{media:"sw-media-media-item",media_folder:"sw-media-folder-item"}[e.props.item.getEntityName()]}return Object.assign(e.data,e.props),t(i(),e.data,e.slots().default)},props:{item:{type:Object,required:!0,validator(t){return!!t.getEntityName()}}}};export{r as default};

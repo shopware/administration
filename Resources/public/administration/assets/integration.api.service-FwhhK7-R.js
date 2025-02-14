@@ -1,0 +1,1 @@
+const n=Shopware.Classes.ApiService;class p extends n{constructor(e,t,s="integration"){super(e,t,s),this.name="integrationService"}generateKey(e={},t={},s=!1){const r=e,a=this.getBasicHeaders(t),i=s?"/_action/access-key/user":"/_action/access-key/intergration";return this.httpClient.get(i,{params:r,headers:a}).then(c=>n.handleResponse(c))}}export{p as default};

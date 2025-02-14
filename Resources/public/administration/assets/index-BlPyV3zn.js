@@ -1,0 +1,1 @@
+import{t}from"./sw-condition-generic.html-DfN_uvNt.js";const{Component:i,Mixin:n}=Shopware,{getPlaceholderSnippet:o}=Shopware.Utils.genericRuleCondition;i.extend("sw-condition-generic-line-item","sw-condition-base-line-item",{template:t,inheritAttrs:!1,mixins:[n.getByName("generic-condition")],methods:{getPlaceholder(e){return this.$tc(o(e))}}});
