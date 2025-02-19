@@ -1,0 +1,1 @@
+import{A as n}from"./api.service-DsjZdjSJ.js";import"./channel-DBgFA-Jb.js";class h extends n{constructor(e,s,t="sync"){super(e,s,t),this.name="syncService"}sync(e,s={},t={}){const r=s,i=this.getBasicHeaders(t);return this.httpClient.post(`/_action/${this.apiEndpoint}`,e,{params:r,headers:i}).then(c=>n.handleResponse(c))}}export{h as default};

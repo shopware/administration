@@ -1,0 +1,1 @@
+import{N as s,s as t}from"./channel-DBgFA-Jb.js";Shopware.Component.register("sw-provide",{template:"<slot />",inheritAttrs:!1,setup(o,{attrs:e}){return Object.keys(e).forEach(r=>s(Shopware.Utils.string.camelCase(r),t(()=>e[r]))),{}}});

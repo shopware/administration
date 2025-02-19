@@ -1,0 +1,1 @@
+const e='{% block sw_cms_element_text_preview %} <div class="sw-cms-el-preview-text"> <h2>Lorem ipsum dolor</h2> <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna. </p> </div> {% endblock %}',t={template:e};export{t as default};

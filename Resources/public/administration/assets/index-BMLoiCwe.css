@@ -1,0 +1,1 @@
+.sw-range-filter .sw-container{grid-template-columns:1fr;gap:12px}.sw-range-filter .sw-container--has-divider{grid-template-columns:1fr 12px 1fr;gap:4px}.sw-range-filter__divider{border-bottom:1px solid #c2ccd6;-webkit-transform:translateY(-40%);transform:translateY(-40%)}
