@@ -210,6 +210,7 @@ module.exports = {
                         'sw-button',
                         'sw-colorpicker',
                         'sw-alert',
+                        'sw-progress-bar',
                         'sw-button',
                         'sw-text-field',
                         'sw-card',
