@@ -218,6 +218,7 @@ module.exports = {
                         'sw-switch-field',
                         'sw-textarea-field',
                         'sw-icon',
+                        'sw-url-field',
                         'sw-datepicker',
                         'sw-select-field',
                         'sw-checkbox-field',

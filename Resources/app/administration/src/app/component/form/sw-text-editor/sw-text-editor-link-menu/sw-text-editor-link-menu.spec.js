@@ -3,6 +3,7 @@
  */
 
 import { mount } from '@vue/test-utils';
+import { MtUrlField } from '@shopware-ag/meteor-component-library';
 import selectMtSelectOptionByText from 'test/_helper_/select-mt-select-by-text';
 
 const seoDomainPrefix = '124c71d524604ccbad6042edce3ac799';
@@ -77,7 +78,6 @@ async function createWrapper(buttonConfig) {
                 'sw-email-field-deprecated': await wrapTestComponent('sw-email-field-deprecated'),
                 'sw-text-field': await wrapTestComponent('sw-text-field'),
                 'sw-text-field-deprecated': await wrapTestComponent('sw-text-field-deprecated', { sync: true }),
-                'sw-url-field': await wrapTestComponent('sw-url-field'),
                 'sw-entity-single-select': await wrapTestComponent('sw-entity-single-select'),
                 'sw-category-tree-field': await wrapTestComponent('sw-category-tree-field'),
                 'sw-media-field': await wrapTestComponent('sw-media-field'),
@@ -117,6 +117,7 @@ async function createWrapper(buttonConfig) {
                 'sw-tree-item': true,
                 'sw-field-copyable': true,
                 'mt-floating-ui': true,
+                'mt-url-field': MtUrlField,
             },
         },
         props: {
