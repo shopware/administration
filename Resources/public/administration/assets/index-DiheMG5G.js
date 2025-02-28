@@ -1,0 +1,1 @@
+const e='{% block sw_select_field %} <mt-select v-bind="$attrs" :options="options" /> {% endblock %} {% block sw_select_field_deprecated %} {% endblock %}',{Component:t}=Shopware;t.register("sw-select-field",{template:e,props:{options:{type:Array,required:!1}}});
