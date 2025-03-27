@@ -1,0 +1,1 @@
+const e='{% block sw_icon %} <mt-icon size="24px" v-bind="$attrs" :name="name" > <slot></slot> </mt-icon> {% endblock %} {% block sw_icon_deprecated %} {% endblock %}',{Component:o}=Shopware;o.register("sw-icon",{template:e,props:{name:{type:String,required:!0}}});
