@@ -1,0 +1,1 @@
+const o=a=>{const e=a();return{icon:"regular-variables-xs",name:"cms-data-mapping",position:14e3,label:Shopware.Snippet.t("sw-text-editor-toolbar-button-cms-data-mapping.label"),children:e.map(t=>({name:t,label:t,action(n){return n.commands.insertContent(`{{ ${t} }}`)}}))}};export{o as default};
