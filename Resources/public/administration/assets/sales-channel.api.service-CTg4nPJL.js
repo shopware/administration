@@ -1,0 +1,1 @@
+import{A as t}from"./api.service-jP6rpoz7.js";import"./channel-R309i92W.js";class h extends t{constructor(e,s,a="sales-channel"){super(e,s,a),this.name="salesChannelService"}generateKey(e={},s={}){const a=e,n=this.getBasicHeaders(s);return this.httpClient.get("/_action/access-key/sales-channel",{params:a,headers:n}).then(r=>t.handleResponse(r))}}export{h as default};
