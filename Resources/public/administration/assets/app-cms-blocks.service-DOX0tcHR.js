@@ -1,0 +1,1 @@
+import{A as t}from"./api.service-jP6rpoz7.js";import"./channel-R309i92W.js";class o extends t{constructor(s,e){super(s,e,null,"application/json"),this.name="appCmsBlocks"}fetchAppBlocks(){return this.httpClient.get("app-system/cms/blocks",{headers:this.getBasicHeaders()}).then(({data:s})=>s.blocks)}}export{o as default};
