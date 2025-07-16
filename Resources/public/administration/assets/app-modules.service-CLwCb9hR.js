@@ -1,0 +1,1 @@
+import{A as t}from"./api.service-BkZ2RaM_.js";import"./channel-DBl56l-E.js";class o extends t{constructor(e,s){super(e,s,"","application/json"),this.name="appModulesService"}async fetchAppModules(){const{data:e}=await this.httpClient.get("app-system/modules",{headers:this.getBasicHeaders()});return e.modules}}export{o as default};
