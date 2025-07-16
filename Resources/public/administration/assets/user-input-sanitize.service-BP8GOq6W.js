@@ -1,0 +1,1 @@
+import{A as i}from"./api.service-BkZ2RaM_.js";import"./channel-DBl56l-E.js";class p extends i{constructor(e,t){super(e,t,null,"application/json"),this.name="userInputSanitizeService"}sanitizeInput({html:e,field:t}){return this.httpClient.post("_admin/sanitize-html",{html:e,field:t??null},{headers:this.getBasicHeaders()}).then(s=>i.handleResponse(s))}}export{p as default};

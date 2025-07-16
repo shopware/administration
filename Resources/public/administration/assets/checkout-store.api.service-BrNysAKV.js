@@ -1,0 +1,1 @@
+import{A as i}from"./api.service-BkZ2RaM_.js";import"./channel-DBl56l-E.js";class a extends i{constructor(e,t,o="checkout"){super(e,t,o),this.name="checkoutStoreService"}checkout(e,t,o={},r={}){const c=`_proxy-order/${e}`,s={...this.getBasicHeaders(r),"sw-context-token":t};return this.httpClient.post(c,{},{...o,headers:s})}}export{a as default};
