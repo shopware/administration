@@ -1,0 +1,1 @@
+import{N as t,s as p}from"./channel-DBl56l-E.js";const a=Shopware.Component.wrapComponentConfig({template:"<slot />",inheritAttrs:!1,setup(r,{attrs:e}){return Object.keys(e).forEach(o=>t(Shopware.Utils.string.camelCase(o),p(()=>e[o]))),{}}});export{a as default};
