@@ -1,0 +1,1 @@
+import{A as s}from"./api.service-BkZ2RaM_.js";import"./channel-DBl56l-E.js";class o extends s{constructor(t,e){super(t,e,null,"application/json"),this.name="notificationsService"}fetchNotifications(t,e=null){return this.httpClient.get("notification/message",{params:{limit:t,latestTimestamp:e},headers:this.getBasicHeaders()}).then(({data:i})=>i)}}export{o as default};
