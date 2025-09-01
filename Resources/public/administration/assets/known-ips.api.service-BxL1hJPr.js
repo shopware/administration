@@ -1,0 +1,1 @@
+import{A as n}from"./api.service-Dyd0zpin.js";import"./channel-D6fkBpuJ.js";class o extends n{constructor(e,t,s="known-ips"){super(e,t,s),this.name="knownIpsService"}getKnownIps(){const e=this.getBasicHeaders();return this.httpClient.get("/_admin/known-ips",{headers:e}).then(t=>t.data.ips)}}export{o as default};
