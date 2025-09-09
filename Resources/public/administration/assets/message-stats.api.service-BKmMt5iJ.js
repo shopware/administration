@@ -1,0 +1,1 @@
+import{A as t}from"./api.service-Dyd0zpin.js";import"./channel-D6fkBpuJ.js";class o extends t{constructor(e,s,a="message-stats"){super(e,s,a),this.name="messageStatsService"}getStats(){const e=this.getBasicHeaders();return this.httpClient.get("/_info/message-stats.json",{headers:e}).then(s=>t.handleResponse(s))}}export{o as default};
