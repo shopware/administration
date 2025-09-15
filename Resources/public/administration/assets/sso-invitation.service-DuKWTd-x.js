@@ -1,0 +1,1 @@
+import{A as s}from"./api.service-Dyd0zpin.js";import"./channel-D6fkBpuJ.js";class n extends s{constructor(e,i,t="api"){super(e,i,t,"application/json"),this.name="ssoInvitationService"}inviteUser(e,i){return this.httpClient.post("/_action/sso/invite-user",{email:e,localeId:i},{headers:this.getBasicHeaders()})}}export{n as default};
