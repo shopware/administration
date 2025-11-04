@@ -1,0 +1,1 @@
+import{A as o}from"./api.service-C8jZavFF.js";import"./channel-DB_OaefQ.js";class p extends o{constructor(e,t,s="actions"){super(e,t,s),this.name="flowActionService"}getActions(e={},t={}){const s=e,i=this.getBasicHeaders(t);return this.httpClient.get("/_info/flow-actions.json",{params:s,headers:i}).then(n=>o.handleResponse(n))}}export{p as default};
