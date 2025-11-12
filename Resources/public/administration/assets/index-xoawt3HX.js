@@ -1,0 +1,1 @@
+import{R as t,z as p}from"./channel-DB_OaefQ.js";const a=Shopware.Component.wrapComponentConfig({template:"<slot />",inheritAttrs:!1,setup(r,{attrs:e}){return Object.keys(e).forEach(o=>t(Shopware.Utils.string.camelCase(o),p(()=>e[o]))),{}}});export{a as default};
