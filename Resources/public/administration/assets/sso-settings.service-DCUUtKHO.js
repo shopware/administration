@@ -1,0 +1,1 @@
+import{A as s}from"./api.service-C8jZavFF.js";import"./channel-DB_OaefQ.js";class a extends s{constructor(e,t,i="api"){super(e,t,i,"application/json"),this.name="ssoSettingsService"}isSso(){return this.httpClient.get("/_info/is-sso",{headers:this.getBasicHeaders()}).then(e=>s.handleResponse(e))}}export{a as default};

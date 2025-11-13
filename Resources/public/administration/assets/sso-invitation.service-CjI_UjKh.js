@@ -1,0 +1,1 @@
+import{A as s}from"./api.service-C8jZavFF.js";import"./channel-DB_OaefQ.js";class n extends s{constructor(e,i,t="api"){super(e,i,t,"application/json"),this.name="ssoInvitationService"}inviteUser(e,i){return this.httpClient.post("/_action/sso/invite-user",{email:e,localeId:i},{headers:this.getBasicHeaders()})}}export{n as default};
