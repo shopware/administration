@@ -1,0 +1,28 @@
+{
+  "base": "/bundles/administration/administration/",
+  "entryPoints": {
+    "administration": {
+      "css": [
+        "/bundles/administration/administration/assets/administration-DheOWJxh.css"
+      ],
+      "dynamic": [
+        "/bundles/administration/administration/assets/shopware-DK-t1TcJ.js",
+        "/bundles/administration/administration/assets/main-EMqN63m0.js"
+      ],
+      "js": [
+        "/bundles/administration/administration/assets/administration-BrQIsQjg.js"
+      ],
+      "legacy": false,
+      "preload": []
+    }
+  },
+  "legacy": false,
+  "metadatas": {},
+  "version": [
+    "7.1.0",
+    7,
+    1,
+    0
+  ],
+  "viteServer": null
+}
