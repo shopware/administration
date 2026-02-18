@@ -1,0 +1,1 @@
+const e='{% block sw_cms_element_product_slider_preview %} <div class="sw-cms-el-preview-product-slider"> <mt-icon name="regular-chevron-left" size="10" /> <sw-cms-product-box-preview /> <mt-icon name="regular-chevron-right" size="10" /> </div> {% endblock %}',r={template:e};export{r as default};
