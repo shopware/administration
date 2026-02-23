@@ -36,7 +36,7 @@
         "pentatrion/vite-bundle": "^8.1",
         "phpseclib/phpseclib": "^3.0",
         "psr/http-message": "^1.1 || ^2.0",
-        "shopware/core": "*",
+        "shopware/core": "dev-ci/refactor-acceptance-job",
         "symfony/asset": "~7.4.0",
         "symfony/cache": "~7.4.0",
         "symfony/cache-contracts": "~3.6.0",
