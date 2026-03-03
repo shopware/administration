@@ -1,0 +1,1 @@
+import{h as n,i as t}from"./administration-BYhNEfuC.js";import{p as r}from"./parents-injection-key-DnJmY2uO.js";const i=Shopware.Component.wrapComponentConfig({setup(){var e;return{parent:(e=t(r,null))==null?void 0:e.value.pop()}},render(){return n(()=>this.parent)}});export{i as default};
