@@ -1,0 +1,1 @@
+import{p as t,a as p}from"./administration-HUu5WNV9.js";const s=Shopware.Component.wrapComponentConfig({template:"<slot />",inheritAttrs:!1,setup(r,{attrs:e}){return Object.keys(e).forEach(o=>t(Shopware.Utils.string.camelCase(o),p(()=>e[o]))),{}}});export{s as default};
