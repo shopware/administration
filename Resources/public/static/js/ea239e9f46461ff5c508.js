@@ -1,0 +1,1 @@
+"use strict";(window.webpackJsonpAdministration=window.webpackJsonpAdministration||[]).push([[86049],{586049:function(o,n,t){t.r(n),t.d(n,{default:function(){return e}});var e={template:"{% block sw_product_media_form_cover_preview %}\n{% endblock %}\n",compatConfig:Shopware.compatConfig,data(){return{columnCount:4,showCoverLabel:!1}}}}}]);
