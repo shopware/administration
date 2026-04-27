@@ -1,0 +1,1 @@
+const e="{% block sw_rule_modal_basic_info_description %} {% endblock %}",t={template:e,computed:{modalTitle(){return this.$tc("sw-settings-shipping.shippingPriceModal.modalTitle")}},methods:{createdComponent(){this.$super("createdComponent")}}};export{t as default};
