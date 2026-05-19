@@ -1,0 +1,1 @@
+import{x as t,y as n}from"./administration-CNzdiowZ.js";const o=Symbol("parents"),r=Shopware.Component.wrapComponentConfig({setup(){var e;return{parent:(e=n(o,null))==null?void 0:e.value.pop()}},render(){return t(()=>this.parent)}}),s=Object.freeze(Object.defineProperty({__proto__:null,default:r},Symbol.toStringTag,{value:"Module"}));export{s as i,o as p,r as s};

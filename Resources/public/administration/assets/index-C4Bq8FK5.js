@@ -1,0 +1,1 @@
+const s='{% block sw_cms_block_cross_selling %} <div class="sw-cms-block-cross-selling"> <slot name="content"> {% block sw_cms_block_cross_selling_slot_content %}{% endblock %} </slot> </div> {% endblock %}',l={template:s};export{l as default};
