@@ -1,0 +1,1 @@
+const t='{% block sw_mail_template_view_templates %} <div class="sw-mail-template-view-templates"> {% block sw_mail_template_view_templates_list %} <sw-mail-template-list ref="mailTemplateList" /> {% endblock %} </div> {% endblock %}',l={template:t,methods:{getList(){var e;(e=this.$refs.mailTemplateList)==null||e.getList()}}};export{l as default};
