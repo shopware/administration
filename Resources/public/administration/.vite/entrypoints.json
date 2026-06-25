@@ -1,0 +1,27 @@
+{
+  "base": "/bundles/administration/administration/",
+  "entryPoints": {
+    "administration": {
+      "css": [
+        "/bundles/administration/administration/assets/administration-D0_l-nuf.css"
+      ],
+      "dynamic": [
+        "/bundles/administration/administration/assets/main-wTwLEbzK.js"
+      ],
+      "js": [
+        "/bundles/administration/administration/assets/administration-BuakZwUh.js"
+      ],
+      "legacy": false,
+      "preload": []
+    }
+  },
+  "legacy": false,
+  "metadatas": {},
+  "version": [
+    "7.1.0",
+    7,
+    1,
+    0
+  ],
+  "viteServer": null
+}
