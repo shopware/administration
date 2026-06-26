@@ -1,0 +1,1 @@
+const e='{% block sw_cms_preview_category_heading %} <div class="sw-cms-preview-category-heading"> {% block sw_cms_preview_category_heading_name %} <div class="sw-cms-preview-category-heading__name"> Lorem ipsum dolor sit amet. </div> {% endblock %} </div> {% endblock %}',s={template:e};export{s as default};
