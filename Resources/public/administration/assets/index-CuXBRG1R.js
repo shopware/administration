@@ -1,0 +1,1 @@
+const e=`{% block sw_cms_element_product_name_preview %} <div class="sw-cms-el-preview-product-name"> <h2 class="sw-cms-el-preview-product-name__heading"> {{ $t('sw-cms.elements.productHeading.name.label') }} </h2> </div> {% endblock %}`,s={template:e};export{s as default};

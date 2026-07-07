@@ -1,0 +1,1 @@
+const t='{% block sw_settings_country_preview_template %} <div class="sw-settings-country-preview-template"> <div v-html="displayFormattingAddress"></div> </div> {% endblock %}',{Component:e}=Shopware,s=e.wrapComponentConfig({template:t,props:{formattingAddress:{type:String,required:!0}},computed:{displayFormattingAddress(){return this.formattingAddress}}});export{s as default};
