@@ -1,0 +1,1 @@
+const t='{% block sw_description_list %} <dl class="sw-description-list" :style="descriptionListStyles" > <slot> {% block sw_description_list_slot_default %}{% endblock %} </slot> </dl> {% endblock %}',s={template:t,props:{grid:{type:String,required:!1,default:"1fr"}},computed:{descriptionListStyles(){return{"grid-template-columns":this.grid}}}};export{s as default};
