@@ -1,0 +1,1 @@
+const t='{% block sw_mail_template_view_header_footer %} <div class="sw-mail-template-view-header-footer"> {% block sw_mail_template_view_header_footer_list %} <sw-mail-header-footer-list ref="mailHeaderFooterList" /> {% endblock %} </div> {% endblock %}',o={template:t,methods:{getList(){var e;(e=this.$refs.mailHeaderFooterList)==null||e.getList()}}};export{o as default};
