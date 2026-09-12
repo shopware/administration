@@ -1,0 +1,1 @@
+const e={data(){return{propertyNames:{label:this.$t("sw-settings-custom-field.customField.detail.labelLabel"),placeholder:this.$t("sw-settings-custom-field.customField.detail.labelPlaceholder"),helpText:this.$t("sw-settings-custom-field.customField.detail.labelHelpText")}}}};export{e as default};

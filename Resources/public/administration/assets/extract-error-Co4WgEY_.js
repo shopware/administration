@@ -1,0 +1,1 @@
+function t(r){var n,s;let e="unknown error";return r instanceof Error&&(e=r.message),a(r)&&(e=((s=(n=r.response)==null?void 0:n.data.errors[0])==null?void 0:s.detail)??"unknown error"),e}function o(r){return r instanceof Error&&r.name==="AxiosError"}function a(r){return o(r)&&typeof r.response<"u"}export{t as e};
