@@ -1,0 +1,1 @@
+const o='{% block sw_first_run_wizard_mailer_base %} <router-view v-slot="{ Component }" > <component :is="Component" v-bind="filteredAttributes" /> </router-view> {% endblock %}',i={template:o,computed:{filteredAttributes(){const t={};return Object.entries(this.$attrs).forEach(([e,r])=>{e.startsWith("on")&&typeof r=="function"&&(t[e]=r)}),t}}};export{i as default};

@@ -1,0 +1,1 @@
+const e='{% block sw_extension_icon %} <div class="sw-extension-icon"> <img class="sw-extension-icon__icon" :draggable="false" :src="src" :alt="alt" > </div> {% endblock %}',s={template:e,props:{src:{type:String,required:!0},alt:{type:String,required:!1,default:""}}};export{s as default};
