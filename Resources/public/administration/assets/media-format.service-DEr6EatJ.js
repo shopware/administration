@@ -1,0 +1,1 @@
+const a=["video/mp4","video/ogg","video/webm"],n=["audio/mp3","audio/mpeg","audio/ogg","audio/wav"],t=[...a,...n];function u(o){return t.includes(o)}function d(o){if(!o)return!1;const i=o.split("/")[0];return(i==="video"||i==="audio")&&!u(o)}export{u as i,d as s};
