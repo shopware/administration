@@ -1,0 +1,1 @@
+const e='{% block sw_cms_element_manufacturer_logo_preview %} <div class="sw-cms-el-preview-manufacturer-logo"> <mt-icon name="regular-image" size="32" /> </div> {% endblock %}',a={template:e};export{a as default};
