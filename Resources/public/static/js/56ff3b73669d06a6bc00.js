@@ -1,0 +1,1 @@
+"use strict";(window.webpackJsonpAdministration=window.webpackJsonpAdministration||[]).push([[3529],{103529:function(t,i,s){s.r(i),i.default={template:"",watch:{value:{handler(){this.$refs.textEditor&&this.value&&(this.isEmpty=this.emptyCheck(this.content),this.placeholderVisible=this.isEmpty,this.$nextTick(()=>{this.setWordCount(),this.setTablesResizable()}))}}}}}}]);
