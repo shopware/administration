@@ -1,0 +1,1 @@
+"use strict";(window.webpackJsonpAdministration=window.webpackJsonpAdministration||[]).push([[92828],{392828:function(n,o,t){t.r(o),t.d(o,{default:function(){return c}});var c={template:'{% block sw_cms_block_form %}\n<div class="sw-cms-block-form">\n    <slot name="content"></slot>\n</div>\n{% endblock %}\n',compatConfig:Shopware.compatConfig}}}]);
