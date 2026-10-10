@@ -1,0 +1,1 @@
+import{E as u,M as a}from"./index-C488B8SJ.js";var s=Object.defineProperty,i=(e,r,t)=>r in e?s(e,r,{enumerable:!0,configurable:!0,writable:!0,value:t}):e[r]=t,n=(e,r,t)=>i(e,r+"",t);class c extends u{constructor(){super(...arguments),n(this,"_uuid",a.generateUUID())}get uuid(){return this._uuid}}export{c as h};

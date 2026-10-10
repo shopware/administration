@@ -1,0 +1,1 @@
+const{Store:r}=Shopware,n={computed:{generateData:{get(){var e,t,o;return(o=(t=(e=r.get("swBulkEdit"))==null?void 0:e.orderDocuments)==null?void 0:t.storno)==null?void 0:o.value},set(e){r.get("swBulkEdit").setOrderDocumentsValue({type:"storno",value:e})}},documentTypeTechnicalName(){return"storno"}}};export{n as default};
