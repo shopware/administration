@@ -1,0 +1,1 @@
+const r='{% block sw_first_run_wizard_paypal_base %} <router-view v-slot="{ Component }" > <component :is="Component" v-bind="filteredAttributes" /> </router-view> {% endblock %}',i={template:r,computed:{filteredAttributes(){const t={};return Object.entries(this.$attrs).forEach(([e,o])=>{e.startsWith("on")&&typeof o=="function"&&(t[e]=o)}),t}}};export{i as default};
