@@ -1,0 +1,1 @@
+const c='{% block sw_cms_block_category_heading %} <div class="sw-cms-block-category-heading"> <slot name="content"> {% block sw_cms_block_category_heading_slot_content %}{% endblock %} </slot> </div> {% endblock %}',o={template:c};export{o as default};

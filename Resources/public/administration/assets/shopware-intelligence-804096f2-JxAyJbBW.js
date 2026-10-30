@@ -1,0 +1,1 @@
+const e='<svg id="meteor-icon-kit__regular-shopware-intelligence" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 2H9.7998C9.00482 5.91926 5.91923 9.00377 2 9.79883V14H10V22H14.2002C14.9952 18.0807 18.0807 14.9952 22 14.2002V10H14V2ZM24 8V16C19.58 16 16 19.58 16 24H8V16H0V8C4.42 8 8 4.42 8 0H16V8H24Z" fill="#1E1E24"/></svg>';export{e as default};
