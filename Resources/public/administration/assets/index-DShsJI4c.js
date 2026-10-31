@@ -1,0 +1,1 @@
+const o='{% block sw_promotion_v2_wizard_description %} <p class="sw-promotion-v2-wizard-description"> <slot> {% block sw_promotion_v2_wizard_description_slot_default %}{% endblock %} </slot> </p> {% endblock %}',t={template:o};export{t as default};
