@@ -1,0 +1,1 @@
+const e='{% block sw_context_menu_divider %} <hr class="sw_context_menu_divider"> {% endblock %}',t={template:e};export{t as default};
