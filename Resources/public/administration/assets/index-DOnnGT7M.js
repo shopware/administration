@@ -1,0 +1,1 @@
+const e={media:"sw-media-media-item",media_folder:"sw-media-folder-item"},i={template:'<component :is="mapEntity" v-bind="$props"><slot/></component>',props:{item:{type:Object,required:!0,validator(t){return!!t.getEntityName()}}},computed:{mapEntity(){return e[this.item.getEntityName()]}}};export{i as default};

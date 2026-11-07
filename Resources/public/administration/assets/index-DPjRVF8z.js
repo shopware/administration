@@ -1,0 +1,1 @@
+const e=`{% block sw_cms_element_image_preview %} <div class="sw-cms-el-preview-image"> <img class="sw-cms-el-preview-image__img" :src="assetFilter('/administration/administration/static/img/cms/preview_mountain_small.webp')" alt="" > </div> {% endblock %}`,s={template:e,computed:{assetFilter(){return Shopware.Filter.getByName("asset")}}};export{s as default};

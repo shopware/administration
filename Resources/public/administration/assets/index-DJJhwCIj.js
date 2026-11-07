@@ -1,0 +1,1 @@
+const t='{% block sw_cms_block_text_teaser_section %} <div class="sw-cms-block-text-teaser-section"> <div class="sw-cms-block-text-teaser-section__teaser"> <slot name="left"></slot> </div> <div class="sw-cms-block-text-teaser-section__content"> <slot name="right"></slot> </div> </div> {% endblock %}',s={template:t};export{s as default};
