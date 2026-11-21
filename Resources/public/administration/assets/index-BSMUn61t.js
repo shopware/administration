@@ -1,0 +1,1 @@
+const o='{% block sw_cms_block_video %} <div class="sw-cms-block-video"> <slot name="video"> {% block sw_cms_block_video_slot_video %}{% endblock %} </slot> </div> {% endblock %}',s={template:o};export{s as default};

@@ -1,0 +1,1 @@
+const t={deprecated:{version:"v6.8.0.0",comment:"Use sw-condition-generic instead."},computed:{operator:{get(){return this.condition.value?this.condition.value.isNet:null},set(i){this.condition.value||(this.condition.value={}),this.condition.value={...this.condition.value,isNet:i}}}}};export{t as default};
