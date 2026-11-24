@@ -1,0 +1,1 @@
+const r='{% block sw_first_run_wizard %} <div class="sw-first-run-wizard"> {% block sw_first_run_wizard_view_content %} <sw-first-run-wizard-modal /> {% endblock %} </div> {% endblock %}',s={template:r};export{s as default};
