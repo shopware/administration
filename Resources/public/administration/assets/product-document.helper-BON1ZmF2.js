@@ -1,0 +1,1 @@
+import{f as r}from"./administration-BmSHgf4J.js";const a=r(new WeakMap);function f(e){var i,s,n;const t=(i=e.translated)==null?void 0:i.mediaId;return a.get(e)??((n=(s=e.translations)==null?void 0:s.find(d=>d.mediaId===t))==null?void 0:n.media)}function c(e,t){t?a.set(e,t):a.delete(e)}export{f as g,c as s};
