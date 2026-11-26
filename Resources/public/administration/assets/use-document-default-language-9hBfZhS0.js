@@ -1,0 +1,1 @@
+import{i as c,b as n}from"./administration-Can5WWH1.js";function u(){const e=Shopware.Store.get("context"),a=c("repositoryFactory",()=>Shopware.Service("repositoryFactory"),!0),o=n(""),{systemLanguageId:r}=e.api;return r&&!e.isSystemDefaultLanguage&&a.create("language").get(r).catch(()=>null).then(t=>{o.value=(t==null?void 0:t.name)??""}),{defaultLanguageName:o}}export{u};
