@@ -1,0 +1,1 @@
+const e='{% block sw_cms_block_image_three_column %} <div class="sw-cms-block-image-three-column"> <slot name="left"></slot> <slot name="center"></slot> <slot name="right"></slot> </div> {% endblock %}',t={template:e};export{t as default};

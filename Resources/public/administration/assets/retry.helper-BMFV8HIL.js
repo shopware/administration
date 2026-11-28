@@ -1,0 +1,1 @@
+class e{static async retry(t,s=3,a=5e3){try{return await t()}catch(i){if(s<=0||!e.isRetryable(i))throw i;return await new Promise(c=>{setTimeout(c,a)}),e.retry(t,s-1,a)}}static isRetryable(t){var a;if(!(t!=null&&t.isAxiosError)||t.code==="ERR_CANCELED")return!1;const s=(a=t.response)==null?void 0:a.status;return s===void 0||s===408||s===429||s>=500}}export{e as R};
